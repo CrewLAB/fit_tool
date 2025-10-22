@@ -9,7 +9,7 @@ environment:
 dependencies:
   collection: ^1.15.0
   csv: ^5.0.0
-  logger: ^1.1.0
+  logger: ^2.0.2+1
   fixnum: ^1.0.1
 
 dev_dependencies:
