@@ -7,6 +7,7 @@ import 'base_type.dart';
 import 'field_component.dart';
 import 'field_definition.dart';
 import 'sub_field.dart';
+import 'utils/logger.dart';
 
 class Field {
   Field({
@@ -551,8 +552,7 @@ class Field {
       final length = (size / type.size).floor();
 
       if (length * type.size != size) {
-        throw FormatException(
-            'Size is not a multiple of type: size: $size, type: $type');
+        logger.w('Size is not a multiple of type: size: $size, type: $type');
       }
       return length;
     }
