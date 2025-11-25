@@ -144,7 +144,7 @@ class FitFileHeader {
     var byteOffset = 0;
     final size = byteData.getUint8(byteOffset);
     if (size != bytes.length) {
-      throw ArgumentError(
+      throw FormatException(
           'Size $size does not match bytes length: ${bytes.length}');
     }
     byteOffset += 1;

@@ -551,7 +551,7 @@ class Field {
       final length = (size / type.size).floor();
 
       if (length * type.size != size) {
-        throw ArgumentError(
+        throw FormatException(
             'Size is not a multiple of type: size: $size, type: $type');
       }
       return length;
