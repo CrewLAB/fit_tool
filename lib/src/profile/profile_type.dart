@@ -2343,8 +2343,25 @@ enum Sport {
   jumpmaster,
   boxing,
   floorClimbing,
+  baseball,
   diving,
-  pickleball,
+  hiit,
+  racket,
+  wheelchairPushWalk,
+  wheelchairPushRun,
+  meditation,
+  discGolf,
+  cricket,
+  rugby,
+  hockey,
+  lacrosse,
+  volleyball,
+  waterTubing,
+  wakesurfing,
+  mixedMartialArts,
+  snorkeling,
+  dance,
+  jumpRope,
   all
 }
 
@@ -2449,10 +2466,44 @@ extension SportExt on Sport {
         return 47;
       case Sport.floorClimbing:
         return 48;
+      case Sport.baseball:
+        return 49;
       case Sport.diving:
         return 53;
-      case Sport.pickleball:
+      case Sport.hiit:
         return 62;
+      case Sport.racket:
+        return 64;
+      case Sport.wheelchairPushWalk:
+        return 65;
+      case Sport.wheelchairPushRun:
+        return 66;
+      case Sport.meditation:
+        return 67;
+      case Sport.discGolf:
+        return 69;
+      case Sport.cricket:
+        return 71;
+      case Sport.rugby:
+        return 72;
+      case Sport.hockey:
+        return 73;
+      case Sport.lacrosse:
+        return 74;
+      case Sport.volleyball:
+        return 75;
+      case Sport.waterTubing:
+        return 76;
+      case Sport.wakesurfing:
+        return 77;
+      case Sport.mixedMartialArts:
+        return 80;
+      case Sport.snorkeling:
+        return 82;
+      case Sport.dance:
+        return 83;
+      case Sport.jumpRope:
+        return 84;
       case Sport.all:
         return 254;
     }
@@ -2558,10 +2609,44 @@ extension SportExt on Sport {
         return Sport.boxing;
       case 48:
         return Sport.floorClimbing;
+      case 49:
+        return Sport.baseball;
       case 53:
         return Sport.diving;
       case 62:
-        return Sport.pickleball;
+        return Sport.hiit;
+      case 64:
+        return Sport.racket;
+      case 65:
+        return Sport.wheelchairPushWalk;
+      case 66:
+        return Sport.wheelchairPushRun;
+      case 67:
+        return Sport.meditation;
+      case 69:
+        return Sport.discGolf;
+      case 71:
+        return Sport.cricket;
+      case 72:
+        return Sport.rugby;
+      case 73:
+        return Sport.hockey;
+      case 74:
+        return Sport.lacrosse;
+      case 75:
+        return Sport.volleyball;
+      case 76:
+        return Sport.waterTubing;
+      case 77:
+        return Sport.wakesurfing;
+      case 80:
+        return Sport.mixedMartialArts;
+      case 82:
+        return Sport.snorkeling;
+      case 83:
+        return Sport.dance;
+      case 84:
+        return Sport.jumpRope;
       case 254:
         return Sport.all;
       default:
@@ -2993,7 +3078,34 @@ enum SubSport {
   apneaHunting,
   virtualActivity,
   obstacle,
+  breathing,
   sailRace,
+  ultra,
+  indoorClimbing,
+  bouldering,
+  hiit,
+  amrap,
+  emom,
+  tabata,
+  pickleball,
+  padel,
+  indoorWheelchairWalk,
+  indoorWheelchairRun,
+  indoorHandCycling,
+  squash,
+  badminton,
+  racquetball,
+  tableTennis,
+  flyCanopy,
+  flyParaglide,
+  flyParamotor,
+  flyPressurized,
+  flyNavigate,
+  flyTimer,
+  flyAltimeter,
+  flyWx,
+  flyVfr,
+  flyIfr,
   all
 }
 
@@ -3120,8 +3232,62 @@ extension SubSportExt on SubSport {
         return 58;
       case SubSport.obstacle:
         return 59;
+      case SubSport.breathing:
+        return 62;
       case SubSport.sailRace:
         return 65;
+      case SubSport.ultra:
+        return 67;
+      case SubSport.indoorClimbing:
+        return 68;
+      case SubSport.bouldering:
+        return 69;
+      case SubSport.hiit:
+        return 70;
+      case SubSport.amrap:
+        return 73;
+      case SubSport.emom:
+        return 74;
+      case SubSport.tabata:
+        return 75;
+      case SubSport.pickleball:
+        return 84;
+      case SubSport.padel:
+        return 85;
+      case SubSport.indoorWheelchairWalk:
+        return 86;
+      case SubSport.indoorWheelchairRun:
+        return 87;
+      case SubSport.indoorHandCycling:
+        return 88;
+      case SubSport.squash:
+        return 94;
+      case SubSport.badminton:
+        return 95;
+      case SubSport.racquetball:
+        return 96;
+      case SubSport.tableTennis:
+        return 97;
+      case SubSport.flyCanopy:
+        return 110;
+      case SubSport.flyParaglide:
+        return 111;
+      case SubSport.flyParamotor:
+        return 112;
+      case SubSport.flyPressurized:
+        return 113;
+      case SubSport.flyNavigate:
+        return 114;
+      case SubSport.flyTimer:
+        return 115;
+      case SubSport.flyAltimeter:
+        return 116;
+      case SubSport.flyWx:
+        return 117;
+      case SubSport.flyVfr:
+        return 118;
+      case SubSport.flyIfr:
+        return 119;
       case SubSport.all:
         return 254;
     }
@@ -3249,12 +3415,66 @@ extension SubSportExt on SubSport {
         return SubSport.virtualActivity;
       case 59:
         return SubSport.obstacle;
+      case 62:
+        return SubSport.breathing;
       case 65:
         return SubSport.sailRace;
+      case 67:
+        return SubSport.ultra;
+      case 68:
+        return SubSport.indoorClimbing;
+      case 69:
+        return SubSport.bouldering;
+      case 70:
+        return SubSport.hiit;
+      case 73:
+        return SubSport.amrap;
+      case 74:
+        return SubSport.emom;
+      case 75:
+        return SubSport.tabata;
+      case 84:
+        return SubSport.pickleball;
+      case 85:
+        return SubSport.padel;
+      case 86:
+        return SubSport.indoorWheelchairWalk;
+      case 87:
+        return SubSport.indoorWheelchairRun;
+      case 88:
+        return SubSport.indoorHandCycling;
+      case 94:
+        return SubSport.squash;
+      case 95:
+        return SubSport.badminton;
+      case 96:
+        return SubSport.racquetball;
+      case 97:
+        return SubSport.tableTennis;
+      case 110:
+        return SubSport.flyCanopy;
+      case 111:
+        return SubSport.flyParaglide;
+      case 112:
+        return SubSport.flyParamotor;
+      case 113:
+        return SubSport.flyPressurized;
+      case 114:
+        return SubSport.flyNavigate;
+      case 115:
+        return SubSport.flyTimer;
+      case 116:
+        return SubSport.flyAltimeter;
+      case 117:
+        return SubSport.flyWx;
+      case 118:
+        return SubSport.flyVfr;
+      case 119:
+        return SubSport.flyIfr;
       case 254:
         return SubSport.all;
       default:
-        throw ArgumentError.value(value);
+        return SubSport.generic;
     }
   }
 }
@@ -3715,7 +3935,16 @@ enum Event {
   elevHighAlert,
   elevLowAlert,
   commTimeout,
-  radarThreatAlert
+  autoActivityDetect,
+  diveAlert,
+  diveGasSwitched,
+  tankPressureReserve,
+  tankPressureCritical,
+  tankLost,
+  radarThreatAlert,
+  tankBatteryLow,
+  tankPodConnected,
+  tankPodDisconnected
 }
 
 extension EventExt on Event {
@@ -4827,6 +5056,24 @@ enum Manufacturer {
   gravaaByte,
   sigeyi,
   coospo,
+  geoid,
+  bosch,
+  kyto,
+  kineticSports,
+  decathlonByte,
+  tqSystems,
+  tagHeuer,
+  keiserFitness,
+  zwiftByte,
+  porscheEp,
+  blackbird,
+  meilanByte,
+  ezon,
+  laisi,
+  myzone,
+  abawo,
+  bafang,
+  luhongTechnology,
   development,
   healthandlife,
   lezyne,
@@ -4883,6 +5130,31 @@ enum Manufacturer {
   form,
   decathlon,
   syncros,
+  heatup,
+  cannondale,
+  trueFitness,
+  rGTCycling,
+  vasa,
+  raceRepublic,
+  fazua,
+  orekaTraining,
+  lsec,
+  lululemonStudio,
+  shanyue,
+  spinningMda,
+  hilldating,
+  aeroSensor,
+  nike,
+  magicshine,
+  ictrainer,
+  absoluteCycling,
+  eoSwimbetter,
+  mywhoosh,
+  ravemen,
+  tektroRacingProducts,
+  daradInnovationCorporation,
+  cycloptim,
+  runna,
   actigraphcorp
 }
 
@@ -5155,6 +5427,42 @@ extension ManufacturerExt on Manufacturer {
         return 134;
       case Manufacturer.coospo:
         return 135;
+      case Manufacturer.geoid:
+        return 136;
+      case Manufacturer.bosch:
+        return 137;
+      case Manufacturer.kyto:
+        return 138;
+      case Manufacturer.kineticSports:
+        return 139;
+      case Manufacturer.decathlonByte:
+        return 140;
+      case Manufacturer.tqSystems:
+        return 141;
+      case Manufacturer.tagHeuer:
+        return 142;
+      case Manufacturer.keiserFitness:
+        return 143;
+      case Manufacturer.zwiftByte:
+        return 144;
+      case Manufacturer.porscheEp:
+        return 145;
+      case Manufacturer.blackbird:
+        return 146;
+      case Manufacturer.meilanByte:
+        return 147;
+      case Manufacturer.ezon:
+        return 148;
+      case Manufacturer.laisi:
+        return 149;
+      case Manufacturer.myzone:
+        return 150;
+      case Manufacturer.abawo:
+        return 151;
+      case Manufacturer.bafang:
+        return 152;
+      case Manufacturer.luhongTechnology:
+        return 153;
       case Manufacturer.development:
         return 255;
       case Manufacturer.healthandlife:
@@ -5267,6 +5575,56 @@ extension ManufacturerExt on Manufacturer {
         return 310;
       case Manufacturer.syncros:
         return 311;
+      case Manufacturer.heatup:
+        return 312;
+      case Manufacturer.cannondale:
+        return 313;
+      case Manufacturer.trueFitness:
+        return 314;
+      case Manufacturer.rGTCycling:
+        return 315;
+      case Manufacturer.vasa:
+        return 316;
+      case Manufacturer.raceRepublic:
+        return 317;
+      case Manufacturer.fazua:
+        return 318;
+      case Manufacturer.orekaTraining:
+        return 319;
+      case Manufacturer.lsec:
+        return 320;
+      case Manufacturer.lululemonStudio:
+        return 321;
+      case Manufacturer.shanyue:
+        return 322;
+      case Manufacturer.spinningMda:
+        return 323;
+      case Manufacturer.hilldating:
+        return 324;
+      case Manufacturer.aeroSensor:
+        return 325;
+      case Manufacturer.nike:
+        return 326;
+      case Manufacturer.magicshine:
+        return 327;
+      case Manufacturer.ictrainer:
+        return 328;
+      case Manufacturer.absoluteCycling:
+        return 329;
+      case Manufacturer.eoSwimbetter:
+        return 330;
+      case Manufacturer.mywhoosh:
+        return 331;
+      case Manufacturer.ravemen:
+        return 332;
+      case Manufacturer.tektroRacingProducts:
+        return 333;
+      case Manufacturer.daradInnovationCorporation:
+        return 334;
+      case Manufacturer.cycloptim:
+        return 335;
+      case Manufacturer.runna:
+        return 337;
       case Manufacturer.actigraphcorp:
         return 5759;
     }
@@ -5540,6 +5898,42 @@ extension ManufacturerExt on Manufacturer {
         return Manufacturer.sigeyi;
       case 135:
         return Manufacturer.coospo;
+      case 136:
+        return Manufacturer.geoid;
+      case 137:
+        return Manufacturer.bosch;
+      case 138:
+        return Manufacturer.kyto;
+      case 139:
+        return Manufacturer.kineticSports;
+      case 140:
+        return Manufacturer.decathlonByte;
+      case 141:
+        return Manufacturer.tqSystems;
+      case 142:
+        return Manufacturer.tagHeuer;
+      case 143:
+        return Manufacturer.keiserFitness;
+      case 144:
+        return Manufacturer.zwiftByte;
+      case 145:
+        return Manufacturer.porscheEp;
+      case 146:
+        return Manufacturer.blackbird;
+      case 147:
+        return Manufacturer.meilanByte;
+      case 148:
+        return Manufacturer.ezon;
+      case 149:
+        return Manufacturer.laisi;
+      case 150:
+        return Manufacturer.myzone;
+      case 151:
+        return Manufacturer.abawo;
+      case 152:
+        return Manufacturer.bafang;
+      case 153:
+        return Manufacturer.luhongTechnology;
       case 255:
         return Manufacturer.development;
       case 257:
@@ -5652,10 +6046,60 @@ extension ManufacturerExt on Manufacturer {
         return Manufacturer.decathlon;
       case 311:
         return Manufacturer.syncros;
+      case 312:
+        return Manufacturer.heatup;
+      case 313:
+        return Manufacturer.cannondale;
+      case 314:
+        return Manufacturer.trueFitness;
+      case 315:
+        return Manufacturer.rGTCycling;
+      case 316:
+        return Manufacturer.vasa;
+      case 317:
+        return Manufacturer.raceRepublic;
+      case 318:
+        return Manufacturer.fazua;
+      case 319:
+        return Manufacturer.orekaTraining;
+      case 320:
+        return Manufacturer.lsec;
+      case 321:
+        return Manufacturer.lululemonStudio;
+      case 322:
+        return Manufacturer.shanyue;
+      case 323:
+        return Manufacturer.spinningMda;
+      case 324:
+        return Manufacturer.hilldating;
+      case 325:
+        return Manufacturer.aeroSensor;
+      case 326:
+        return Manufacturer.nike;
+      case 327:
+        return Manufacturer.magicshine;
+      case 328:
+        return Manufacturer.ictrainer;
+      case 329:
+        return Manufacturer.absoluteCycling;
+      case 330:
+        return Manufacturer.eoSwimbetter;
+      case 331:
+        return Manufacturer.mywhoosh;
+      case 332:
+        return Manufacturer.ravemen;
+      case 333:
+        return Manufacturer.tektroRacingProducts;
+      case 334:
+        return Manufacturer.daradInnovationCorporation;
+      case 335:
+        return Manufacturer.cycloptim;
+      case 337:
+        return Manufacturer.runna;
       case 5759:
         return Manufacturer.actigraphcorp;
       default:
-        throw ArgumentError.value(value);
+        return Manufacturer.garmin;
     }
   }
 }
@@ -5677,6 +6121,8 @@ enum GarminProduct {
   fr225SingleByteProductId,
   gen3BsmSingleByteProductId,
   gen3BcmSingleByteProductId,
+  hrmFitSingleByteProductId,
+  oHR,
   fr301China,
   fr301Japan,
   fr301Korea,
@@ -5999,11 +6445,121 @@ enum GarminProduct {
   venu2Asia,
   approachS12Asia,
   approachG12Asia,
+  edge1040,
+  venu2Plus,
+  gnss,
+  fr55,
+  instinct2,
+  instinct2s,
+  fenix7s,
+  fenix7,
+  fenix7x,
+  fenix7sApac,
+  fenix7Apac,
+  fenix7xApac,
+  epixGen2,
+  epixGen2Apac,
+  fr945LteAsia,
+  vivoMoveSport,
+  vivomoveTrend,
+  fr255Music,
+  fr255SmallMusic,
+  fr255,
+  fr255Small,
   approachS42Asia,
+  descentG1,
+  venu2PlusAsia,
+  fr955,
+  fr55Asia,
+  edge540,
+  edge840,
+  vivosmart5,
+  instinct2Asia,
+  marqGen2,
+  venusq2,
+  venusq2music,
+  marqGen2Aviator,
+  d2AirX10,
+  hrmProPlus,
+  descentG1Asia,
+  tactix7,
+  instinctCrossover,
+  edgeExplore2,
+  descentMk3,
+  descentMk3i,
+  approachS70,
+  fr265Large,
+  fr265Small,
+  venu3,
+  venu3s,
+  tacxNeoSmart,
+  tacxNeo2Smart,
+  tacxNeo2TSmart,
+  tacxNeoSmartBike,
+  tacxSatoriSmart,
+  tacxFlowSmart,
+  tacxVortexSmart,
+  tacxBushidoSmart,
+  tacxGeniusSmart,
+  tacxFluxFluxSSmart,
+  tacxFlux2Smart,
+  tacxMagnum,
+  edge1040Asia,
+  epixGen2Pro42,
+  epixGen2Pro47,
+  epixGen2Pro51,
+  fr965,
+  enduro2,
+  fenix7sProSolar,
+  fenix7ProSolar,
+  fenix7xProSolar,
+  lily2,
+  instinct2x,
+  vivoactive5,
+  fr165,
+  fr165Music,
+  edge1050,
+  descentT2,
+  hrmFit,
+  marqGen2Commander,
+  lilyAthlete,
+  rallyX10,
+  fenix8Solar,
+  fenix8SolarLarge,
+  fenix8Small,
+  fenix8,
+  d2Mach1Pro,
+  enduro3,
+  instinctE40mm,
+  instinctE45mm,
+  instinct3Solar45mm,
+  instinct3Amoled45mm,
+  instinct3Amoled50mm,
+  descentG2,
+  venuX1,
+  hrm200,
+  vivoactive6,
+  fenix8Pro,
+  edge550,
+  edge850,
+  venu4,
+  venu4s,
+  approachS44,
+  edgeMtb,
+  approachS50,
+  fenixE,
+  bounce2,
+  instinct3Solar50mm,
+  tactix8Amoled,
+  tactix8Solar,
+  d2Mach2,
+  instinctCrossoverAmoled,
+  d2AirX15,
   sdm4,
   edgeRemote,
   tacxTrainingAppWin,
   tacxTrainingAppMac,
+  tacxTrainingAppMacCatalyst,
   trainingCenter,
   tacxTrainingAppAndroid,
   tacxTrainingAppIos,
@@ -6714,6 +7270,232 @@ extension GarminProductExt on GarminProduct {
         return 65531;
       case GarminProduct.androidAntplusPlugin:
         return 65532;
+      case GarminProduct.hrmFitSingleByteProductId:
+        return 22;
+      case GarminProduct.oHR:
+        return 255;
+      case GarminProduct.edge1040:
+        return 3843;
+      case GarminProduct.venu2Plus:
+        return 3851;
+      case GarminProduct.gnss:
+        return 3865;
+      case GarminProduct.fr55:
+        return 3869;
+      case GarminProduct.instinct2:
+        return 3888;
+      case GarminProduct.instinct2s:
+        return 3889;
+      case GarminProduct.fenix7s:
+        return 3905;
+      case GarminProduct.fenix7:
+        return 3906;
+      case GarminProduct.fenix7x:
+        return 3907;
+      case GarminProduct.fenix7sApac:
+        return 3908;
+      case GarminProduct.fenix7Apac:
+        return 3909;
+      case GarminProduct.fenix7xApac:
+        return 3910;
+      case GarminProduct.epixGen2:
+        return 3943;
+      case GarminProduct.epixGen2Apac:
+        return 3944;
+      case GarminProduct.fr945LteAsia:
+        return 3978;
+      case GarminProduct.vivoMoveSport:
+        return 3982;
+      case GarminProduct.vivomoveTrend:
+        return 3983;
+      case GarminProduct.fr255Music:
+        return 3990;
+      case GarminProduct.fr255SmallMusic:
+        return 3991;
+      case GarminProduct.fr255:
+        return 3992;
+      case GarminProduct.fr255Small:
+        return 3993;
+      case GarminProduct.approachS42Asia:
+        return 4002;
+      case GarminProduct.descentG1:
+        return 4005;
+      case GarminProduct.venu2PlusAsia:
+        return 4017;
+      case GarminProduct.fr955:
+        return 4024;
+      case GarminProduct.fr55Asia:
+        return 4033;
+      case GarminProduct.edge540:
+        return 4061;
+      case GarminProduct.edge840:
+        return 4062;
+      case GarminProduct.vivosmart5:
+        return 4063;
+      case GarminProduct.instinct2Asia:
+        return 4071;
+      case GarminProduct.marqGen2:
+        return 4105;
+      case GarminProduct.venusq2:
+        return 4115;
+      case GarminProduct.venusq2music:
+        return 4116;
+      case GarminProduct.marqGen2Aviator:
+        return 4124;
+      case GarminProduct.d2AirX10:
+        return 4125;
+      case GarminProduct.hrmProPlus:
+        return 4130;
+      case GarminProduct.descentG1Asia:
+        return 4132;
+      case GarminProduct.tactix7:
+        return 4135;
+      case GarminProduct.instinctCrossover:
+        return 4155;
+      case GarminProduct.edgeExplore2:
+        return 4169;
+      case GarminProduct.descentMk3:
+        return 4222;
+      case GarminProduct.descentMk3i:
+        return 4223;
+      case GarminProduct.approachS70:
+        return 4233;
+      case GarminProduct.fr265Large:
+        return 4257;
+      case GarminProduct.fr265Small:
+        return 4258;
+      case GarminProduct.venu3:
+        return 4260;
+      case GarminProduct.venu3s:
+        return 4261;
+      case GarminProduct.tacxNeoSmart:
+        return 4265;
+      case GarminProduct.tacxNeo2Smart:
+        return 4266;
+      case GarminProduct.tacxNeo2TSmart:
+        return 4267;
+      case GarminProduct.tacxNeoSmartBike:
+        return 4268;
+      case GarminProduct.tacxSatoriSmart:
+        return 4269;
+      case GarminProduct.tacxFlowSmart:
+        return 4270;
+      case GarminProduct.tacxVortexSmart:
+        return 4271;
+      case GarminProduct.tacxBushidoSmart:
+        return 4272;
+      case GarminProduct.tacxGeniusSmart:
+        return 4273;
+      case GarminProduct.tacxFluxFluxSSmart:
+        return 4274;
+      case GarminProduct.tacxFlux2Smart:
+        return 4275;
+      case GarminProduct.tacxMagnum:
+        return 4276;
+      case GarminProduct.edge1040Asia:
+        return 4305;
+      case GarminProduct.epixGen2Pro42:
+        return 4312;
+      case GarminProduct.epixGen2Pro47:
+        return 4313;
+      case GarminProduct.epixGen2Pro51:
+        return 4314;
+      case GarminProduct.fr965:
+        return 4315;
+      case GarminProduct.enduro2:
+        return 4341;
+      case GarminProduct.fenix7sProSolar:
+        return 4374;
+      case GarminProduct.fenix7ProSolar:
+        return 4375;
+      case GarminProduct.fenix7xProSolar:
+        return 4376;
+      case GarminProduct.lily2:
+        return 4380;
+      case GarminProduct.instinct2x:
+        return 4394;
+      case GarminProduct.vivoactive5:
+        return 4426;
+      case GarminProduct.fr165:
+        return 4432;
+      case GarminProduct.fr165Music:
+        return 4433;
+      case GarminProduct.edge1050:
+        return 4440;
+      case GarminProduct.descentT2:
+        return 4442;
+      case GarminProduct.hrmFit:
+        return 4446;
+      case GarminProduct.marqGen2Commander:
+        return 4472;
+      case GarminProduct.lilyAthlete:
+        return 4477;
+      case GarminProduct.rallyX10:
+        return 4525;
+      case GarminProduct.fenix8Solar:
+        return 4532;
+      case GarminProduct.fenix8SolarLarge:
+        return 4533;
+      case GarminProduct.fenix8Small:
+        return 4534;
+      case GarminProduct.fenix8:
+        return 4536;
+      case GarminProduct.d2Mach1Pro:
+        return 4556;
+      case GarminProduct.enduro3:
+        return 4575;
+      case GarminProduct.instinctE40mm:
+        return 4583;
+      case GarminProduct.instinctE45mm:
+        return 4584;
+      case GarminProduct.instinct3Solar45mm:
+        return 4585;
+      case GarminProduct.instinct3Amoled45mm:
+        return 4586;
+      case GarminProduct.instinct3Amoled50mm:
+        return 4587;
+      case GarminProduct.descentG2:
+        return 4588;
+      case GarminProduct.venuX1:
+        return 4603;
+      case GarminProduct.hrm200:
+        return 4606;
+      case GarminProduct.vivoactive6:
+        return 4625;
+      case GarminProduct.fenix8Pro:
+        return 4631;
+      case GarminProduct.edge550:
+        return 4633;
+      case GarminProduct.edge850:
+        return 4634;
+      case GarminProduct.venu4:
+        return 4643;
+      case GarminProduct.venu4s:
+        return 4644;
+      case GarminProduct.approachS44:
+        return 4647;
+      case GarminProduct.edgeMtb:
+        return 4655;
+      case GarminProduct.approachS50:
+        return 4656;
+      case GarminProduct.fenixE:
+        return 4666;
+      case GarminProduct.instinctCrossoverAmoled:
+        return 4678;
+      case GarminProduct.bounce2:
+        return 4745;
+      case GarminProduct.instinct3Solar50mm:
+        return 4759;
+      case GarminProduct.tactix8Amoled:
+        return 4775;
+      case GarminProduct.tactix8Solar:
+        return 4776;
+      case GarminProduct.d2Mach2:
+        return 4879;
+      case GarminProduct.d2AirX15:
+        return 4944;
+      case GarminProduct.tacxTrainingAppMacCatalyst:
+        return 20565;
       case GarminProduct.connect:
         return 65534;
     }
@@ -7419,10 +8201,236 @@ extension GarminProductExt on GarminProduct {
         return GarminProduct.connectiqSimulator;
       case 65532:
         return GarminProduct.androidAntplusPlugin;
+      case 22:
+        return GarminProduct.hrmFitSingleByteProductId;
+      case 255:
+        return GarminProduct.oHR;
+      case 3843:
+        return GarminProduct.edge1040;
+      case 3851:
+        return GarminProduct.venu2Plus;
+      case 3865:
+        return GarminProduct.gnss;
+      case 3869:
+        return GarminProduct.fr55;
+      case 3888:
+        return GarminProduct.instinct2;
+      case 3889:
+        return GarminProduct.instinct2s;
+      case 3905:
+        return GarminProduct.fenix7s;
+      case 3906:
+        return GarminProduct.fenix7;
+      case 3907:
+        return GarminProduct.fenix7x;
+      case 3908:
+        return GarminProduct.fenix7sApac;
+      case 3909:
+        return GarminProduct.fenix7Apac;
+      case 3910:
+        return GarminProduct.fenix7xApac;
+      case 3943:
+        return GarminProduct.epixGen2;
+      case 3944:
+        return GarminProduct.epixGen2Apac;
+      case 3978:
+        return GarminProduct.fr945LteAsia;
+      case 3982:
+        return GarminProduct.vivoMoveSport;
+      case 3983:
+        return GarminProduct.vivomoveTrend;
+      case 3990:
+        return GarminProduct.fr255Music;
+      case 3991:
+        return GarminProduct.fr255SmallMusic;
+      case 3992:
+        return GarminProduct.fr255;
+      case 3993:
+        return GarminProduct.fr255Small;
+      case 4002:
+        return GarminProduct.approachS42Asia;
+      case 4005:
+        return GarminProduct.descentG1;
+      case 4017:
+        return GarminProduct.venu2PlusAsia;
+      case 4024:
+        return GarminProduct.fr955;
+      case 4033:
+        return GarminProduct.fr55Asia;
+      case 4061:
+        return GarminProduct.edge540;
+      case 4062:
+        return GarminProduct.edge840;
+      case 4063:
+        return GarminProduct.vivosmart5;
+      case 4071:
+        return GarminProduct.instinct2Asia;
+      case 4105:
+        return GarminProduct.marqGen2;
+      case 4115:
+        return GarminProduct.venusq2;
+      case 4116:
+        return GarminProduct.venusq2music;
+      case 4124:
+        return GarminProduct.marqGen2Aviator;
+      case 4125:
+        return GarminProduct.d2AirX10;
+      case 4130:
+        return GarminProduct.hrmProPlus;
+      case 4132:
+        return GarminProduct.descentG1Asia;
+      case 4135:
+        return GarminProduct.tactix7;
+      case 4155:
+        return GarminProduct.instinctCrossover;
+      case 4169:
+        return GarminProduct.edgeExplore2;
+      case 4222:
+        return GarminProduct.descentMk3;
+      case 4223:
+        return GarminProduct.descentMk3i;
+      case 4233:
+        return GarminProduct.approachS70;
+      case 4257:
+        return GarminProduct.fr265Large;
+      case 4258:
+        return GarminProduct.fr265Small;
+      case 4260:
+        return GarminProduct.venu3;
+      case 4261:
+        return GarminProduct.venu3s;
+      case 4265:
+        return GarminProduct.tacxNeoSmart;
+      case 4266:
+        return GarminProduct.tacxNeo2Smart;
+      case 4267:
+        return GarminProduct.tacxNeo2TSmart;
+      case 4268:
+        return GarminProduct.tacxNeoSmartBike;
+      case 4269:
+        return GarminProduct.tacxSatoriSmart;
+      case 4270:
+        return GarminProduct.tacxFlowSmart;
+      case 4271:
+        return GarminProduct.tacxVortexSmart;
+      case 4272:
+        return GarminProduct.tacxBushidoSmart;
+      case 4273:
+        return GarminProduct.tacxGeniusSmart;
+      case 4274:
+        return GarminProduct.tacxFluxFluxSSmart;
+      case 4275:
+        return GarminProduct.tacxFlux2Smart;
+      case 4276:
+        return GarminProduct.tacxMagnum;
+      case 4305:
+        return GarminProduct.edge1040Asia;
+      case 4312:
+        return GarminProduct.epixGen2Pro42;
+      case 4313:
+        return GarminProduct.epixGen2Pro47;
+      case 4314:
+        return GarminProduct.epixGen2Pro51;
+      case 4315:
+        return GarminProduct.fr965;
+      case 4341:
+        return GarminProduct.enduro2;
+      case 4374:
+        return GarminProduct.fenix7sProSolar;
+      case 4375:
+        return GarminProduct.fenix7ProSolar;
+      case 4376:
+        return GarminProduct.fenix7xProSolar;
+      case 4380:
+        return GarminProduct.lily2;
+      case 4394:
+        return GarminProduct.instinct2x;
+      case 4426:
+        return GarminProduct.vivoactive5;
+      case 4432:
+        return GarminProduct.fr165;
+      case 4433:
+        return GarminProduct.fr165Music;
+      case 4440:
+        return GarminProduct.edge1050;
+      case 4442:
+        return GarminProduct.descentT2;
+      case 4446:
+        return GarminProduct.hrmFit;
+      case 4472:
+        return GarminProduct.marqGen2Commander;
+      case 4477:
+        return GarminProduct.lilyAthlete;
+      case 4525:
+        return GarminProduct.rallyX10;
+      case 4532:
+        return GarminProduct.fenix8Solar;
+      case 4533:
+        return GarminProduct.fenix8SolarLarge;
+      case 4534:
+        return GarminProduct.fenix8Small;
+      case 4536:
+        return GarminProduct.fenix8;
+      case 4556:
+        return GarminProduct.d2Mach1Pro;
+      case 4575:
+        return GarminProduct.enduro3;
+      case 4583:
+        return GarminProduct.instinctE40mm;
+      case 4584:
+        return GarminProduct.instinctE45mm;
+      case 4585:
+        return GarminProduct.instinct3Solar45mm;
+      case 4586:
+        return GarminProduct.instinct3Amoled45mm;
+      case 4587:
+        return GarminProduct.instinct3Amoled50mm;
+      case 4588:
+        return GarminProduct.descentG2;
+      case 4603:
+        return GarminProduct.venuX1;
+      case 4606:
+        return GarminProduct.hrm200;
+      case 4625:
+        return GarminProduct.vivoactive6;
+      case 4631:
+        return GarminProduct.fenix8Pro;
+      case 4633:
+        return GarminProduct.edge550;
+      case 4634:
+        return GarminProduct.edge850;
+      case 4643:
+        return GarminProduct.venu4;
+      case 4644:
+        return GarminProduct.venu4s;
+      case 4647:
+        return GarminProduct.approachS44;
+      case 4655:
+        return GarminProduct.edgeMtb;
+      case 4656:
+        return GarminProduct.approachS50;
+      case 4666:
+        return GarminProduct.fenixE;
+      case 4678:
+        return GarminProduct.instinctCrossoverAmoled;
+      case 4745:
+        return GarminProduct.bounce2;
+      case 4759:
+        return GarminProduct.instinct3Solar50mm;
+      case 4775:
+        return GarminProduct.tactix8Amoled;
+      case 4776:
+        return GarminProduct.tactix8Solar;
+      case 4879:
+        return GarminProduct.d2Mach2;
+      case 4944:
+        return GarminProduct.d2AirX15;
+      case 20565:
+        return GarminProduct.tacxTrainingAppMacCatalyst;
       case 65534:
         return GarminProduct.connect;
       default:
-        throw ArgumentError.value(value);
+        return GarminProduct.hrm1;
     }
   }
 }
