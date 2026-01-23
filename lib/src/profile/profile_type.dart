@@ -4022,8 +4022,26 @@ extension EventExt on Event {
         return 46;
       case Event.commTimeout:
         return 47;
+      case Event.autoActivityDetect:
+        return 54;
+      case Event.diveAlert:
+        return 56;
+      case Event.diveGasSwitched:
+        return 57;
+      case Event.tankPressureReserve:
+        return 71;
+      case Event.tankPressureCritical:
+        return 72;
+      case Event.tankLost:
+        return 73;
       case Event.radarThreatAlert:
         return 75;
+      case Event.tankBatteryLow:
+        return 76;
+      case Event.tankPodConnected:
+        return 81;
+      case Event.tankPodDisconnected:
+        return 82;
     }
   }
 
@@ -4101,10 +4119,28 @@ extension EventExt on Event {
         return Event.elevLowAlert;
       case 47:
         return Event.commTimeout;
+      case 54:
+        return Event.autoActivityDetect;
+      case 56:
+        return Event.diveAlert;
+      case 57:
+        return Event.diveGasSwitched;
+      case 71:
+        return Event.tankPressureReserve;
+      case 72:
+        return Event.tankPressureCritical;
+      case 73:
+        return Event.tankLost;
       case 75:
         return Event.radarThreatAlert;
+      case 76:
+        return Event.tankBatteryLow;
+      case 81:
+        return Event.tankPodConnected;
+      case 82:
+        return Event.tankPodDisconnected;
       default:
-        throw ArgumentError.value(value);
+        return Event.timer;
     }
   }
 }
@@ -7316,8 +7352,6 @@ extension GarminProductExt on GarminProduct {
         return 3992;
       case GarminProduct.fr255Small:
         return 3993;
-      case GarminProduct.approachS42Asia:
-        return 4002;
       case GarminProduct.descentG1:
         return 4005;
       case GarminProduct.venu2PlusAsia:
@@ -8247,8 +8281,6 @@ extension GarminProductExt on GarminProduct {
         return GarminProduct.fr255;
       case 3993:
         return GarminProduct.fr255Small;
-      case 4002:
-        return GarminProduct.approachS42Asia;
       case 4005:
         return GarminProduct.descentG1;
       case 4017:
@@ -13273,7 +13305,28 @@ enum CardioExerciseName {
   squatJacks,
   weightedSquatJacks,
   tripleUnder,
-  weightedTripleUnder
+  weightedTripleUnder,
+  elliptical,
+  spinning,
+  polePaddleForwardWheelchair,
+  polePaddleBackwardWheelchair,
+  poleHandcycleForwardWheelchair,
+  poleHandcycleBackwardWheelchair,
+  poleRainbowWheelchair,
+  doublePunchForwardWheelchair,
+  doublePunchDownWheelchair,
+  doublePunchSidewaysWheelchair,
+  doublePunchUpWheelchair,
+  sitSkiWheelchair,
+  sittingJacksWheelchair,
+  punchForwardWheelchair,
+  punchDownWheelchair,
+  punchSidewaysWheelchair,
+  punchUpWheelchair,
+  punchBagWheelchair,
+  poleDdFfUuWheelchair,
+  butterflyArmsWheelchair,
+  punch
 }
 
 extension CardioExerciseNameExt on CardioExerciseName {
@@ -13323,6 +13376,48 @@ extension CardioExerciseNameExt on CardioExerciseName {
         return 20;
       case CardioExerciseName.weightedTripleUnder:
         return 21;
+      case CardioExerciseName.elliptical:
+        return 22;
+      case CardioExerciseName.spinning:
+        return 23;
+      case CardioExerciseName.polePaddleForwardWheelchair:
+        return 24;
+      case CardioExerciseName.polePaddleBackwardWheelchair:
+        return 25;
+      case CardioExerciseName.poleHandcycleForwardWheelchair:
+        return 26;
+      case CardioExerciseName.poleHandcycleBackwardWheelchair:
+        return 27;
+      case CardioExerciseName.poleRainbowWheelchair:
+        return 28;
+      case CardioExerciseName.doublePunchForwardWheelchair:
+        return 29;
+      case CardioExerciseName.doublePunchDownWheelchair:
+        return 30;
+      case CardioExerciseName.doublePunchSidewaysWheelchair:
+        return 31;
+      case CardioExerciseName.doublePunchUpWheelchair:
+        return 32;
+      case CardioExerciseName.sitSkiWheelchair:
+        return 33;
+      case CardioExerciseName.sittingJacksWheelchair:
+        return 34;
+      case CardioExerciseName.punchForwardWheelchair:
+        return 35;
+      case CardioExerciseName.punchDownWheelchair:
+        return 36;
+      case CardioExerciseName.punchSidewaysWheelchair:
+        return 37;
+      case CardioExerciseName.punchUpWheelchair:
+        return 38;
+      case CardioExerciseName.punchBagWheelchair:
+        return 39;
+      case CardioExerciseName.poleDdFfUuWheelchair:
+        return 40;
+      case CardioExerciseName.butterflyArmsWheelchair:
+        return 41;
+      case CardioExerciseName.punch:
+        return 42;
     }
   }
 
@@ -13372,8 +13467,50 @@ extension CardioExerciseNameExt on CardioExerciseName {
         return CardioExerciseName.tripleUnder;
       case 21:
         return CardioExerciseName.weightedTripleUnder;
+      case 22:
+        return CardioExerciseName.elliptical;
+      case 23:
+        return CardioExerciseName.spinning;
+      case 24:
+        return CardioExerciseName.polePaddleForwardWheelchair;
+      case 25:
+        return CardioExerciseName.polePaddleBackwardWheelchair;
+      case 26:
+        return CardioExerciseName.poleHandcycleForwardWheelchair;
+      case 27:
+        return CardioExerciseName.poleHandcycleBackwardWheelchair;
+      case 28:
+        return CardioExerciseName.poleRainbowWheelchair;
+      case 29:
+        return CardioExerciseName.doublePunchForwardWheelchair;
+      case 30:
+        return CardioExerciseName.doublePunchDownWheelchair;
+      case 31:
+        return CardioExerciseName.doublePunchSidewaysWheelchair;
+      case 32:
+        return CardioExerciseName.doublePunchUpWheelchair;
+      case 33:
+        return CardioExerciseName.sitSkiWheelchair;
+      case 34:
+        return CardioExerciseName.sittingJacksWheelchair;
+      case 35:
+        return CardioExerciseName.punchForwardWheelchair;
+      case 36:
+        return CardioExerciseName.punchDownWheelchair;
+      case 37:
+        return CardioExerciseName.punchSidewaysWheelchair;
+      case 38:
+        return CardioExerciseName.punchUpWheelchair;
+      case 39:
+        return CardioExerciseName.punchBagWheelchair;
+      case 40:
+        return CardioExerciseName.poleDdFfUuWheelchair;
+      case 41:
+        return CardioExerciseName.butterflyArmsWheelchair;
+      case 42:
+        return CardioExerciseName.punch;
       default:
-        throw ArgumentError.value(value);
+        return CardioExerciseName.bobAndWeaveCircle;
     }
   }
 }
@@ -13383,7 +13520,11 @@ enum CarryExerciseName {
   farmersWalk,
   farmersWalkOnToes,
   hexDumbbellHold,
-  overheadCarry
+  overheadCarry,
+  dumbbellWaiterCarry,
+  farmersCarryWalkLunge,
+  farmersCarry,
+  farmersCarryOnToes
 }
 
 extension CarryExerciseNameExt on CarryExerciseName {
@@ -13399,6 +13540,14 @@ extension CarryExerciseNameExt on CarryExerciseName {
         return 3;
       case CarryExerciseName.overheadCarry:
         return 4;
+      case CarryExerciseName.dumbbellWaiterCarry:
+        return 5;
+      case CarryExerciseName.farmersCarryWalkLunge:
+        return 6;
+      case CarryExerciseName.farmersCarry:
+        return 7;
+      case CarryExerciseName.farmersCarryOnToes:
+        return 8;
     }
   }
 
@@ -13414,8 +13563,16 @@ extension CarryExerciseNameExt on CarryExerciseName {
         return CarryExerciseName.hexDumbbellHold;
       case 4:
         return CarryExerciseName.overheadCarry;
+      case 5:
+        return CarryExerciseName.dumbbellWaiterCarry;
+      case 6:
+        return CarryExerciseName.farmersCarryWalkLunge;
+      case 7:
+        return CarryExerciseName.farmersCarry;
+      case 8:
+        return CarryExerciseName.farmersCarryOnToes;
       default:
-        throw ArgumentError.value(value);
+        return CarryExerciseName.barHolds;
     }
   }
 }
@@ -13625,7 +13782,28 @@ enum CoreExerciseName {
   swan,
   swimming,
   teaser,
-  theHundred
+  theHundred,
+  bicepCurlWithLegExtensionWithWeights,
+  hangingLSit,
+  lowerLiftWithWeights,
+  ringLSit,
+  rowing1WithWeights,
+  rowing2WithWeights,
+  scissorsWithWeights,
+  singleLegStretchWithWeights,
+  toesToElbows,
+  weightedCrissCross,
+  weightedDoubleLegStretch,
+  weightedTheHundred,
+  lSit,
+  turkishGetUp,
+  weightedRingLSit,
+  weightedHangingLSit,
+  weightedLSit,
+  sideBendLowWheelchair,
+  sideBendMidWheelchair,
+  sideBendHighWheelchair,
+  seatedSideBend
 }
 
 extension CoreExerciseNameExt on CoreExerciseName {
@@ -13777,6 +13955,48 @@ extension CoreExerciseNameExt on CoreExerciseName {
         return 71;
       case CoreExerciseName.theHundred:
         return 72;
+      case CoreExerciseName.bicepCurlWithLegExtensionWithWeights:
+        return 73;
+      case CoreExerciseName.hangingLSit:
+        return 75;
+      case CoreExerciseName.lowerLiftWithWeights:
+        return 77;
+      case CoreExerciseName.ringLSit:
+        return 79;
+      case CoreExerciseName.rowing1WithWeights:
+        return 80;
+      case CoreExerciseName.rowing2WithWeights:
+        return 81;
+      case CoreExerciseName.scissorsWithWeights:
+        return 82;
+      case CoreExerciseName.singleLegStretchWithWeights:
+        return 83;
+      case CoreExerciseName.toesToElbows:
+        return 84;
+      case CoreExerciseName.weightedCrissCross:
+        return 85;
+      case CoreExerciseName.weightedDoubleLegStretch:
+        return 86;
+      case CoreExerciseName.weightedTheHundred:
+        return 87;
+      case CoreExerciseName.lSit:
+        return 88;
+      case CoreExerciseName.turkishGetUp:
+        return 89;
+      case CoreExerciseName.weightedRingLSit:
+        return 90;
+      case CoreExerciseName.weightedHangingLSit:
+        return 91;
+      case CoreExerciseName.weightedLSit:
+        return 92;
+      case CoreExerciseName.sideBendLowWheelchair:
+        return 93;
+      case CoreExerciseName.sideBendMidWheelchair:
+        return 94;
+      case CoreExerciseName.sideBendHighWheelchair:
+        return 95;
+      case CoreExerciseName.seatedSideBend:
+        return 96;
     }
   }
 
@@ -13928,8 +14148,50 @@ extension CoreExerciseNameExt on CoreExerciseName {
         return CoreExerciseName.teaser;
       case 72:
         return CoreExerciseName.theHundred;
+      case 73:
+        return CoreExerciseName.bicepCurlWithLegExtensionWithWeights;
+      case 75:
+        return CoreExerciseName.hangingLSit;
+      case 77:
+        return CoreExerciseName.lowerLiftWithWeights;
+      case 79:
+        return CoreExerciseName.ringLSit;
+      case 80:
+        return CoreExerciseName.rowing1WithWeights;
+      case 81:
+        return CoreExerciseName.rowing2WithWeights;
+      case 82:
+        return CoreExerciseName.scissorsWithWeights;
+      case 83:
+        return CoreExerciseName.singleLegStretchWithWeights;
+      case 84:
+        return CoreExerciseName.toesToElbows;
+      case 85:
+        return CoreExerciseName.weightedCrissCross;
+      case 86:
+        return CoreExerciseName.weightedDoubleLegStretch;
+      case 87:
+        return CoreExerciseName.weightedTheHundred;
+      case 88:
+        return CoreExerciseName.lSit;
+      case 89:
+        return CoreExerciseName.turkishGetUp;
+      case 90:
+        return CoreExerciseName.weightedRingLSit;
+      case 91:
+        return CoreExerciseName.weightedHangingLSit;
+      case 92:
+        return CoreExerciseName.weightedLSit;
+      case 93:
+        return CoreExerciseName.sideBendLowWheelchair;
+      case 94:
+        return CoreExerciseName.sideBendMidWheelchair;
+      case 95:
+        return CoreExerciseName.sideBendHighWheelchair;
+      case 96:
+        return CoreExerciseName.seatedSideBend;
       default:
-        throw ArgumentError.value(value);
+        return CoreExerciseName.absJabs;
     }
   }
 }
@@ -15252,7 +15514,8 @@ extension HipStabilityExerciseNameExt on HipStabilityExerciseName {
 enum HipSwingExerciseName {
   singleArmKettlebellSwing,
   singleArmDumbbellSwing,
-  stepOutSwing
+  stepOutSwing,
+  oneArmSwing
 }
 
 extension HipSwingExerciseNameExt on HipSwingExerciseName {
@@ -15264,6 +15527,8 @@ extension HipSwingExerciseNameExt on HipSwingExerciseName {
         return 1;
       case HipSwingExerciseName.stepOutSwing:
         return 2;
+      case HipSwingExerciseName.oneArmSwing:
+        return 3;
     }
   }
 
@@ -15275,8 +15540,10 @@ extension HipSwingExerciseNameExt on HipSwingExerciseName {
         return HipSwingExerciseName.singleArmDumbbellSwing;
       case 2:
         return HipSwingExerciseName.stepOutSwing;
+      case 3:
+        return HipSwingExerciseName.oneArmSwing;
       default:
-        throw ArgumentError.value(value);
+        return HipSwingExerciseName.singleArmKettlebellSwing;
     }
   }
 }
@@ -19720,7 +19987,7 @@ extension WarmUpExerciseNameExt on WarmUpExerciseName {
   }
 }
 
-enum RunExerciseName { run, walk, jog, sprint }
+enum RunExerciseName { run, walk, jog, sprint, runOrWalk, speedWalk, warmUp }
 
 extension RunExerciseNameExt on RunExerciseName {
   int get value {
@@ -19733,6 +20000,12 @@ extension RunExerciseNameExt on RunExerciseName {
         return 2;
       case RunExerciseName.sprint:
         return 3;
+      case RunExerciseName.runOrWalk:
+        return 4;
+      case RunExerciseName.speedWalk:
+        return 5;
+      case RunExerciseName.warmUp:
+        return 6;
     }
   }
 
@@ -19746,8 +20019,14 @@ extension RunExerciseNameExt on RunExerciseName {
         return RunExerciseName.jog;
       case 3:
         return RunExerciseName.sprint;
+      case 4:
+        return RunExerciseName.runOrWalk;
+      case 5:
+        return RunExerciseName.speedWalk;
+      case 6:
+        return RunExerciseName.warmUp;
       default:
-        throw ArgumentError.value(value);
+        return RunExerciseName.run;
     }
   }
 }
