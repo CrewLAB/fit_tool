@@ -14281,7 +14281,8 @@ enum CrunchExerciseName {
   toesToBar,
   weightedToesToBar,
   crunch,
-  straightLegCrunchWithBall
+  straightLegCrunchWithBall,
+  legClimbCrunch
 }
 
 extension CrunchExerciseNameExt on CrunchExerciseName {
@@ -14457,6 +14458,8 @@ extension CrunchExerciseNameExt on CrunchExerciseName {
         return 83;
       case CrunchExerciseName.straightLegCrunchWithBall:
         return 84;
+      case CrunchExerciseName.legClimbCrunch:
+        return 86;
     }
   }
 
@@ -14632,6 +14635,8 @@ extension CrunchExerciseNameExt on CrunchExerciseName {
         return CrunchExerciseName.crunch;
       case 84:
         return CrunchExerciseName.straightLegCrunchWithBall;
+      case 86:
+        return CrunchExerciseName.legClimbCrunch;
       default:
         throw ArgumentError.value(value);
     }
@@ -14682,7 +14687,14 @@ enum CurlExerciseName {
   swissBallDumbbellOverheadTricepsExtension,
   swissBallEzBarPreacherCurl,
   twistingStandingDumbbellBicepsCurl,
-  wideGripEzBarBicepsCurl
+  wideGripEzBarBicepsCurl,
+  oneArmConcentrationCurl,
+  standingZottmanBicepsCurl,
+  dumbbellBicepsCurl,
+  dragCurlWheelchair,
+  dumbbellBicepsCurlWheelchair,
+  bottleCurl,
+  seatedBottleCurl
 }
 
 extension CurlExerciseNameExt on CurlExerciseName {
@@ -14776,6 +14788,20 @@ extension CurlExerciseNameExt on CurlExerciseName {
         return 42;
       case CurlExerciseName.wideGripEzBarBicepsCurl:
         return 43;
+      case CurlExerciseName.oneArmConcentrationCurl:
+        return 44;
+      case CurlExerciseName.standingZottmanBicepsCurl:
+        return 45;
+      case CurlExerciseName.dumbbellBicepsCurl:
+        return 46;
+      case CurlExerciseName.dragCurlWheelchair:
+        return 47;
+      case CurlExerciseName.dumbbellBicepsCurlWheelchair:
+        return 48;
+      case CurlExerciseName.bottleCurl:
+        return 49;
+      case CurlExerciseName.seatedBottleCurl:
+        return 50;
     }
   }
 
@@ -14869,6 +14895,20 @@ extension CurlExerciseNameExt on CurlExerciseName {
         return CurlExerciseName.twistingStandingDumbbellBicepsCurl;
       case 43:
         return CurlExerciseName.wideGripEzBarBicepsCurl;
+      case 44:
+        return CurlExerciseName.oneArmConcentrationCurl;
+      case 45:
+        return CurlExerciseName.standingZottmanBicepsCurl;
+      case 46:
+        return CurlExerciseName.dumbbellBicepsCurl;
+      case 47:
+        return CurlExerciseName.dragCurlWheelchair;
+      case 48:
+        return CurlExerciseName.dumbbellBicepsCurlWheelchair;
+      case 49:
+        return CurlExerciseName.bottleCurl;
+      case 50:
+        return CurlExerciseName.seatedBottleCurl;
       default:
         throw ArgumentError.value(value);
     }
@@ -14894,7 +14934,12 @@ enum DeadliftExerciseName {
   sumoDeadlift,
   sumoDeadliftHighPull,
   trapBarDeadlift,
-  wideGripBarbellDeadlift
+  wideGripBarbellDeadlift,
+  kettlebellDeadlift,
+  kettlebellSumoDeadlift,
+  romanianDeadlift,
+  singleLegRomanianDeadliftCircuit,
+  straightLegDeadlift
 }
 
 extension DeadliftExerciseNameExt on DeadliftExerciseName {
@@ -14938,6 +14983,16 @@ extension DeadliftExerciseNameExt on DeadliftExerciseName {
         return 17;
       case DeadliftExerciseName.wideGripBarbellDeadlift:
         return 18;
+      case DeadliftExerciseName.kettlebellDeadlift:
+        return 20;
+      case DeadliftExerciseName.kettlebellSumoDeadlift:
+        return 21;
+      case DeadliftExerciseName.romanianDeadlift:
+        return 23;
+      case DeadliftExerciseName.singleLegRomanianDeadliftCircuit:
+        return 24;
+      case DeadliftExerciseName.straightLegDeadlift:
+        return 25;
     }
   }
 
@@ -14981,6 +15036,16 @@ extension DeadliftExerciseNameExt on DeadliftExerciseName {
         return DeadliftExerciseName.trapBarDeadlift;
       case 18:
         return DeadliftExerciseName.wideGripBarbellDeadlift;
+      case 20:
+        return DeadliftExerciseName.kettlebellDeadlift;
+      case 21:
+        return DeadliftExerciseName.kettlebellSumoDeadlift;
+      case 23:
+        return DeadliftExerciseName.romanianDeadlift;
+      case 24:
+        return DeadliftExerciseName.singleLegRomanianDeadliftCircuit;
+      case 25:
+        return DeadliftExerciseName.straightLegDeadlift;
       default:
         throw ArgumentError.value(value);
     }
@@ -14997,7 +15062,10 @@ enum FlyeExerciseName {
   singleArmStandingCableReverseFlye,
   swissBallDumbbellFlye,
   armRotations,
-  hugATree
+  hugATree,
+  faceDownInclineReverseFlye,
+  inclineReverseFlye,
+  rearDeltFlyWheelchair
 }
 
 extension FlyeExerciseNameExt on FlyeExerciseName {
@@ -15023,6 +15091,12 @@ extension FlyeExerciseNameExt on FlyeExerciseName {
         return 8;
       case FlyeExerciseName.hugATree:
         return 9;
+      case FlyeExerciseName.faceDownInclineReverseFlye:
+        return 10;
+      case FlyeExerciseName.inclineReverseFlye:
+        return 11;
+      case FlyeExerciseName.rearDeltFlyWheelchair:
+        return 12;
     }
   }
 
@@ -15048,6 +15122,12 @@ extension FlyeExerciseNameExt on FlyeExerciseName {
         return FlyeExerciseName.armRotations;
       case 9:
         return FlyeExerciseName.hugATree;
+      case 10:
+        return FlyeExerciseName.faceDownInclineReverseFlye;
+      case 11:
+        return FlyeExerciseName.inclineReverseFlye;
+      case 12:
+        return FlyeExerciseName.rearDeltFlyWheelchair;
       default:
         throw ArgumentError.value(value);
     }
@@ -15358,7 +15438,8 @@ enum HipStabilityExerciseName {
   standingRearLegRaise,
   weightedStandingRearLegRaise,
   supineHipInternalRotation,
-  weightedSupineHipInternalRotation
+  weightedSupineHipInternalRotation,
+  lyingAbductionStretch
 }
 
 extension HipStabilityExerciseNameExt on HipStabilityExerciseName {
@@ -15432,6 +15513,8 @@ extension HipStabilityExerciseNameExt on HipStabilityExerciseName {
         return 32;
       case HipStabilityExerciseName.weightedSupineHipInternalRotation:
         return 33;
+      case HipStabilityExerciseName.lyingAbductionStretch:
+        return 34;
     }
   }
 
@@ -15505,6 +15588,8 @@ extension HipStabilityExerciseNameExt on HipStabilityExerciseName {
         return HipStabilityExerciseName.supineHipInternalRotation;
       case 33:
         return HipStabilityExerciseName.weightedSupineHipInternalRotation;
+      case 34:
+        return HipStabilityExerciseName.lyingAbductionStretch;
       default:
         throw ArgumentError.value(value);
     }
@@ -15803,7 +15888,14 @@ enum LateralRaiseExerciseName {
   wallSlide,
   weightedWallSlide,
   armCircles,
-  shavingTheHead
+  shavingTheHead,
+  dumbbellLateralRaise,
+  ringDipKipping,
+  wallWalk,
+  dumbbellFrontRaiseWheelchair,
+  dumbbellLateralRaiseWheelchair,
+  poleDoubleArmOverheadAndForwardWheelchair,
+  poleStraightArmOverheadWheelchair
 }
 
 extension LateralRaiseExerciseNameExt on LateralRaiseExerciseName {
@@ -15877,6 +15969,20 @@ extension LateralRaiseExerciseNameExt on LateralRaiseExerciseName {
         return 32;
       case LateralRaiseExerciseName.shavingTheHead:
         return 33;
+      case LateralRaiseExerciseName.dumbbellLateralRaise:
+        return 34;
+      case LateralRaiseExerciseName.ringDipKipping:
+        return 36;
+      case LateralRaiseExerciseName.wallWalk:
+        return 37;
+      case LateralRaiseExerciseName.dumbbellFrontRaiseWheelchair:
+        return 38;
+      case LateralRaiseExerciseName.dumbbellLateralRaiseWheelchair:
+        return 39;
+      case LateralRaiseExerciseName.poleDoubleArmOverheadAndForwardWheelchair:
+        return 40;
+      case LateralRaiseExerciseName.poleStraightArmOverheadWheelchair:
+        return 41;
     }
   }
 
@@ -15950,6 +16056,20 @@ extension LateralRaiseExerciseNameExt on LateralRaiseExerciseName {
         return LateralRaiseExerciseName.armCircles;
       case 33:
         return LateralRaiseExerciseName.shavingTheHead;
+      case 34:
+        return LateralRaiseExerciseName.dumbbellLateralRaise;
+      case 36:
+        return LateralRaiseExerciseName.ringDipKipping;
+      case 37:
+        return LateralRaiseExerciseName.wallWalk;
+      case 38:
+        return LateralRaiseExerciseName.dumbbellFrontRaiseWheelchair;
+      case 39:
+        return LateralRaiseExerciseName.dumbbellLateralRaiseWheelchair;
+      case 40:
+        return LateralRaiseExerciseName.poleDoubleArmOverheadAndForwardWheelchair;
+      case 41:
+        return LateralRaiseExerciseName.poleStraightArmOverheadWheelchair;
       default:
         throw ArgumentError.value(value);
     }
@@ -15968,7 +16088,9 @@ enum LegCurlExerciseName {
   splitStanceExtension,
   staggeredStanceGoodMorning,
   swissBallHipRaiseAndLegCurl,
-  zercherGoodMorning
+  zercherGoodMorning,
+  bandGoodMorning,
+  barGoodMorning
 }
 
 extension LegCurlExerciseNameExt on LegCurlExerciseName {
@@ -15998,6 +16120,10 @@ extension LegCurlExerciseNameExt on LegCurlExerciseName {
         return 10;
       case LegCurlExerciseName.zercherGoodMorning:
         return 11;
+      case LegCurlExerciseName.bandGoodMorning:
+        return 12;
+      case LegCurlExerciseName.barGoodMorning:
+        return 13;
     }
   }
 
@@ -16027,6 +16153,10 @@ extension LegCurlExerciseNameExt on LegCurlExerciseName {
         return LegCurlExerciseName.swissBallHipRaiseAndLegCurl;
       case 11:
         return LegCurlExerciseName.zercherGoodMorning;
+      case 12:
+        return LegCurlExerciseName.bandGoodMorning;
+      case 13:
+        return LegCurlExerciseName.barGoodMorning;
       default:
         throw ArgumentError.value(value);
     }
@@ -16241,7 +16371,17 @@ enum LungeExerciseName {
   walkingDumbbellLunge,
   walkingLunge,
   weightedWalkingLunge,
-  wideGripOverheadBarbellSplitSquat
+  wideGripOverheadBarbellSplitSquat,
+  alternatingDumbbellLunge,
+  dumbbellReverseLunge,
+  overheadDumbbellLunge,
+  scissorPowerSwitch,
+  dumbbellOverheadWalkingLunge,
+  curtsyLunge,
+  weightedCurtsyLunge,
+  weightedShiftingSideLunge,
+  weightedSideLungeAndPress,
+  weightedSideLungeJumpOff
 }
 
 extension LungeExerciseNameExt on LungeExerciseName {
@@ -16409,6 +16549,26 @@ extension LungeExerciseNameExt on LungeExerciseName {
         return 79;
       case LungeExerciseName.wideGripOverheadBarbellSplitSquat:
         return 80;
+      case LungeExerciseName.alternatingDumbbellLunge:
+        return 81;
+      case LungeExerciseName.dumbbellReverseLunge:
+        return 82;
+      case LungeExerciseName.overheadDumbbellLunge:
+        return 83;
+      case LungeExerciseName.scissorPowerSwitch:
+        return 84;
+      case LungeExerciseName.dumbbellOverheadWalkingLunge:
+        return 85;
+      case LungeExerciseName.curtsyLunge:
+        return 86;
+      case LungeExerciseName.weightedCurtsyLunge:
+        return 87;
+      case LungeExerciseName.weightedShiftingSideLunge:
+        return 88;
+      case LungeExerciseName.weightedSideLungeAndPress:
+        return 89;
+      case LungeExerciseName.weightedSideLungeJumpOff:
+        return 90;
     }
   }
 
@@ -16576,6 +16736,26 @@ extension LungeExerciseNameExt on LungeExerciseName {
         return LungeExerciseName.weightedWalkingLunge;
       case 80:
         return LungeExerciseName.wideGripOverheadBarbellSplitSquat;
+      case 81:
+        return LungeExerciseName.alternatingDumbbellLunge;
+      case 82:
+        return LungeExerciseName.dumbbellReverseLunge;
+      case 83:
+        return LungeExerciseName.overheadDumbbellLunge;
+      case 84:
+        return LungeExerciseName.scissorPowerSwitch;
+      case 85:
+        return LungeExerciseName.dumbbellOverheadWalkingLunge;
+      case 86:
+        return LungeExerciseName.curtsyLunge;
+      case 87:
+        return LungeExerciseName.weightedCurtsyLunge;
+      case 88:
+        return LungeExerciseName.weightedShiftingSideLunge;
+      case 89:
+        return LungeExerciseName.weightedSideLungeAndPress;
+      case 90:
+        return LungeExerciseName.weightedSideLungeJumpOff;
       default:
         throw ArgumentError.value(value);
     }
@@ -16603,7 +16783,15 @@ enum OlympicLiftExerciseName {
   singleArmHangSnatch,
   singleArmKettlebellSnatch,
   splitJerk,
-  squatCleanAndJerk
+  squatCleanAndJerk,
+  dumbbellHangSnatch,
+  dumbbellPowerCleanAndJerk,
+  dumbbellPowerCleanAndPushPress,
+  dumbbellPowerCleanAndStrictPress,
+  dumbbellSnatch,
+  medicineBallClean,
+  cleanAndPress,
+  snatch
 }
 
 extension OlympicLiftExerciseNameExt on OlympicLiftExerciseName {
@@ -16651,6 +16839,22 @@ extension OlympicLiftExerciseNameExt on OlympicLiftExerciseName {
         return 19;
       case OlympicLiftExerciseName.squatCleanAndJerk:
         return 20;
+      case OlympicLiftExerciseName.dumbbellHangSnatch:
+        return 21;
+      case OlympicLiftExerciseName.dumbbellPowerCleanAndJerk:
+        return 22;
+      case OlympicLiftExerciseName.dumbbellPowerCleanAndPushPress:
+        return 23;
+      case OlympicLiftExerciseName.dumbbellPowerCleanAndStrictPress:
+        return 24;
+      case OlympicLiftExerciseName.dumbbellSnatch:
+        return 25;
+      case OlympicLiftExerciseName.medicineBallClean:
+        return 26;
+      case OlympicLiftExerciseName.cleanAndPress:
+        return 27;
+      case OlympicLiftExerciseName.snatch:
+        return 28;
     }
   }
 
@@ -16698,6 +16902,22 @@ extension OlympicLiftExerciseNameExt on OlympicLiftExerciseName {
         return OlympicLiftExerciseName.splitJerk;
       case 20:
         return OlympicLiftExerciseName.squatCleanAndJerk;
+      case 21:
+        return OlympicLiftExerciseName.dumbbellHangSnatch;
+      case 22:
+        return OlympicLiftExerciseName.dumbbellPowerCleanAndJerk;
+      case 23:
+        return OlympicLiftExerciseName.dumbbellPowerCleanAndPushPress;
+      case 24:
+        return OlympicLiftExerciseName.dumbbellPowerCleanAndStrictPress;
+      case 25:
+        return OlympicLiftExerciseName.dumbbellSnatch;
+      case 26:
+        return OlympicLiftExerciseName.medicineBallClean;
+      case 27:
+        return OlympicLiftExerciseName.cleanAndPress;
+      case 28:
+        return OlympicLiftExerciseName.snatch;
       default:
         throw ArgumentError.value(value);
     }
@@ -16839,7 +17059,8 @@ enum PlankExerciseName {
   bridgeOneLegBridge,
   plankWithArmVariations,
   plankWithLegLift,
-  reversePlankWithLegPull
+  reversePlankWithLegPull,
+  ringPlankSprawls
 }
 
 extension PlankExerciseNameExt on PlankExerciseName {
@@ -17115,6 +17336,8 @@ extension PlankExerciseNameExt on PlankExerciseName {
         return 133;
       case PlankExerciseName.reversePlankWithLegPull:
         return 134;
+      case PlankExerciseName.ringPlankSprawls:
+        return 135;
     }
   }
 
@@ -17391,6 +17614,8 @@ extension PlankExerciseNameExt on PlankExerciseName {
         return PlankExerciseName.plankWithLegLift;
       case 134:
         return PlankExerciseName.reversePlankWithLegPull;
+      case 135:
+        return PlankExerciseName.ringPlankSprawls;
       default:
         throw ArgumentError.value(value);
     }
@@ -17430,7 +17655,12 @@ enum PlyoExerciseName {
   squatJumpOntoBox,
   weightedSquatJumpOntoBox,
   squatJumpsInAndOut,
-  weightedSquatJumpsInAndOut
+  weightedSquatJumpsInAndOut,
+  boxJump,
+  boxJumpOvers,
+  boxJumpOversOverTheBox,
+  starJumpSquats,
+  jumpSquat
 }
 
 extension PlyoExerciseNameExt on PlyoExerciseName {
@@ -17502,6 +17732,16 @@ extension PlyoExerciseNameExt on PlyoExerciseName {
         return 31;
       case PlyoExerciseName.weightedSquatJumpsInAndOut:
         return 32;
+      case PlyoExerciseName.boxJump:
+        return 33;
+      case PlyoExerciseName.boxJumpOvers:
+        return 34;
+      case PlyoExerciseName.boxJumpOversOverTheBox:
+        return 35;
+      case PlyoExerciseName.starJumpSquats:
+        return 36;
+      case PlyoExerciseName.jumpSquat:
+        return 37;
     }
   }
 
@@ -17573,6 +17813,16 @@ extension PlyoExerciseNameExt on PlyoExerciseName {
         return PlyoExerciseName.squatJumpsInAndOut;
       case 32:
         return PlyoExerciseName.weightedSquatJumpsInAndOut;
+      case 33:
+        return PlyoExerciseName.boxJump;
+      case 34:
+        return PlyoExerciseName.boxJumpOvers;
+      case 35:
+        return PlyoExerciseName.boxJumpOversOverTheBox;
+      case 36:
+        return PlyoExerciseName.starJumpSquats;
+      case 37:
+        return PlyoExerciseName.jumpSquat;
       default:
         throw ArgumentError.value(value);
     }
@@ -17618,7 +17868,14 @@ enum PullUpExerciseName {
   weightedLPullUp,
   suspendedChinUp,
   weightedSuspendedChinUp,
-  pullUp
+  pullUp,
+  chinUp,
+  neutralGripChinUp,
+  weightedChinUp,
+  bandAssistedPullUp,
+  neutralGripPullUp,
+  weightedNeutralGripChinUp,
+  weightedNeutralGripPullUp
 }
 
 extension PullUpExerciseNameExt on PullUpExerciseName {
@@ -17702,6 +17959,20 @@ extension PullUpExerciseNameExt on PullUpExerciseName {
         return 37;
       case PullUpExerciseName.pullUp:
         return 38;
+      case PullUpExerciseName.chinUp:
+        return 39;
+      case PullUpExerciseName.neutralGripChinUp:
+        return 40;
+      case PullUpExerciseName.weightedChinUp:
+        return 41;
+      case PullUpExerciseName.bandAssistedPullUp:
+        return 42;
+      case PullUpExerciseName.neutralGripPullUp:
+        return 43;
+      case PullUpExerciseName.weightedNeutralGripChinUp:
+        return 44;
+      case PullUpExerciseName.weightedNeutralGripPullUp:
+        return 45;
     }
   }
 
@@ -17785,6 +18056,20 @@ extension PullUpExerciseNameExt on PullUpExerciseName {
         return PullUpExerciseName.weightedSuspendedChinUp;
       case 38:
         return PullUpExerciseName.pullUp;
+      case 39:
+        return PullUpExerciseName.chinUp;
+      case 40:
+        return PullUpExerciseName.neutralGripChinUp;
+      case 41:
+        return PullUpExerciseName.weightedChinUp;
+      case 42:
+        return PullUpExerciseName.bandAssistedPullUp;
+      case 43:
+        return PullUpExerciseName.neutralGripPullUp;
+      case 44:
+        return PullUpExerciseName.weightedNeutralGripChinUp;
+      case 45:
+        return PullUpExerciseName.weightedNeutralGripPullUp;
       default:
         throw ArgumentError.value(value);
     }
@@ -17870,7 +18155,19 @@ enum PushUpExerciseName {
   ringPushUp,
   weightedRingPushUp,
   pushUp,
-  pilatesPushup
+  pilatesPushup,
+  dynamicPushUp,
+  kippingHandstandPushUp,
+  shoulderTappingPushUp,
+  bicepsPushUp,
+  hinduPushUp,
+  pikePushUp,
+  wideGripPushUp,
+  weightedBicepsPushUp,
+  weightedHinduPushUp,
+  weightedPikePushUp,
+  kippingParalletteHandstandPushUp,
+  wallPushUp
 }
 
 extension PushUpExerciseNameExt on PushUpExerciseName {
@@ -18034,6 +18331,30 @@ extension PushUpExerciseNameExt on PushUpExerciseName {
         return 77;
       case PushUpExerciseName.pilatesPushup:
         return 78;
+      case PushUpExerciseName.dynamicPushUp:
+        return 79;
+      case PushUpExerciseName.kippingHandstandPushUp:
+        return 80;
+      case PushUpExerciseName.shoulderTappingPushUp:
+        return 81;
+      case PushUpExerciseName.bicepsPushUp:
+        return 82;
+      case PushUpExerciseName.hinduPushUp:
+        return 83;
+      case PushUpExerciseName.pikePushUp:
+        return 84;
+      case PushUpExerciseName.wideGripPushUp:
+        return 85;
+      case PushUpExerciseName.weightedBicepsPushUp:
+        return 86;
+      case PushUpExerciseName.weightedHinduPushUp:
+        return 87;
+      case PushUpExerciseName.weightedPikePushUp:
+        return 88;
+      case PushUpExerciseName.kippingParalletteHandstandPushUp:
+        return 89;
+      case PushUpExerciseName.wallPushUp:
+        return 90;
     }
   }
 
@@ -18197,6 +18518,30 @@ extension PushUpExerciseNameExt on PushUpExerciseName {
         return PushUpExerciseName.pushUp;
       case 78:
         return PushUpExerciseName.pilatesPushup;
+      case 79:
+        return PushUpExerciseName.dynamicPushUp;
+      case 80:
+        return PushUpExerciseName.kippingHandstandPushUp;
+      case 81:
+        return PushUpExerciseName.shoulderTappingPushUp;
+      case 82:
+        return PushUpExerciseName.bicepsPushUp;
+      case 83:
+        return PushUpExerciseName.hinduPushUp;
+      case 84:
+        return PushUpExerciseName.pikePushUp;
+      case 85:
+        return PushUpExerciseName.wideGripPushUp;
+      case 86:
+        return PushUpExerciseName.weightedBicepsPushUp;
+      case 87:
+        return PushUpExerciseName.weightedHinduPushUp;
+      case 88:
+        return PushUpExerciseName.weightedPikePushUp;
+      case 89:
+        return PushUpExerciseName.kippingParalletteHandstandPushUp;
+      case 90:
+        return PushUpExerciseName.wallPushUp;
       default:
         throw ArgumentError.value(value);
     }
@@ -18237,7 +18582,26 @@ enum RowExerciseName {
   weightedTowelGripInvertedRow,
   underhandGripCableRow,
   vGripCableRow,
-  wideGripSeatedCableRow
+  wideGripSeatedCableRow,
+  alternatingDumbbellRow,
+  invertedRow,
+  row,
+  weightedRow,
+  indoorRow,
+  bandedFacePulls,
+  chestSupportedDumbbellRow,
+  declineRingRow,
+  elevatedRingRow,
+  rdlBentOverRowWithBarbellDumbbell,
+  ringRow,
+  barbellRow,
+  bentOverRowWithBarbell,
+  bentOverRowWithDumbell,
+  seatedUnderhandGripCableRow,
+  trxInvertedRow,
+  weightedInvertedRow,
+  weightedTrxInvertedRow,
+  dumbbellRowWheelchair
 }
 
 extension RowExerciseNameExt on RowExerciseName {
@@ -18311,6 +18675,44 @@ extension RowExerciseNameExt on RowExerciseName {
         return 32;
       case RowExerciseName.wideGripSeatedCableRow:
         return 33;
+      case RowExerciseName.alternatingDumbbellRow:
+        return 34;
+      case RowExerciseName.invertedRow:
+        return 35;
+      case RowExerciseName.row:
+        return 36;
+      case RowExerciseName.weightedRow:
+        return 37;
+      case RowExerciseName.indoorRow:
+        return 38;
+      case RowExerciseName.bandedFacePulls:
+        return 39;
+      case RowExerciseName.chestSupportedDumbbellRow:
+        return 40;
+      case RowExerciseName.declineRingRow:
+        return 41;
+      case RowExerciseName.elevatedRingRow:
+        return 42;
+      case RowExerciseName.rdlBentOverRowWithBarbellDumbbell:
+        return 43;
+      case RowExerciseName.ringRow:
+        return 44;
+      case RowExerciseName.barbellRow:
+        return 45;
+      case RowExerciseName.bentOverRowWithBarbell:
+        return 46;
+      case RowExerciseName.bentOverRowWithDumbell:
+        return 47;
+      case RowExerciseName.seatedUnderhandGripCableRow:
+        return 48;
+      case RowExerciseName.trxInvertedRow:
+        return 49;
+      case RowExerciseName.weightedInvertedRow:
+        return 50;
+      case RowExerciseName.weightedTrxInvertedRow:
+        return 51;
+      case RowExerciseName.dumbbellRowWheelchair:
+        return 52;
     }
   }
 
@@ -18384,6 +18786,44 @@ extension RowExerciseNameExt on RowExerciseName {
         return RowExerciseName.vGripCableRow;
       case 33:
         return RowExerciseName.wideGripSeatedCableRow;
+      case 34:
+        return RowExerciseName.alternatingDumbbellRow;
+      case 35:
+        return RowExerciseName.invertedRow;
+      case 36:
+        return RowExerciseName.row;
+      case 37:
+        return RowExerciseName.weightedRow;
+      case 38:
+        return RowExerciseName.indoorRow;
+      case 39:
+        return RowExerciseName.bandedFacePulls;
+      case 40:
+        return RowExerciseName.chestSupportedDumbbellRow;
+      case 41:
+        return RowExerciseName.declineRingRow;
+      case 42:
+        return RowExerciseName.elevatedRingRow;
+      case 43:
+        return RowExerciseName.rdlBentOverRowWithBarbellDumbbell;
+      case 44:
+        return RowExerciseName.ringRow;
+      case 45:
+        return RowExerciseName.barbellRow;
+      case 46:
+        return RowExerciseName.bentOverRowWithBarbell;
+      case 47:
+        return RowExerciseName.bentOverRowWithDumbell;
+      case 48:
+        return RowExerciseName.seatedUnderhandGripCableRow;
+      case 49:
+        return RowExerciseName.trxInvertedRow;
+      case 50:
+        return RowExerciseName.weightedInvertedRow;
+      case 51:
+        return RowExerciseName.weightedTrxInvertedRow;
+      case 52:
+        return RowExerciseName.dumbbellRowWheelchair;
       default:
         throw ArgumentError.value(value);
     }
@@ -18414,7 +18854,14 @@ enum ShoulderPressExerciseName {
   smithMachineOverheadPress,
   splitStanceHammerCurlToPress,
   swissBallDumbbellShoulderPress,
-  weightPlateFrontRaise
+  weightPlateFrontRaise,
+  dumbbellShoulderPress,
+  militaryPress,
+  strictPress,
+  dumbbellFrontRaise,
+  dumbbellCurlToOverheadPressWheelchair,
+  arnoldPressWheelchair,
+  overheadDumbbellPressWheelchair
 }
 
 extension ShoulderPressExerciseNameExt on ShoulderPressExerciseName {
@@ -18468,6 +18915,20 @@ extension ShoulderPressExerciseNameExt on ShoulderPressExerciseName {
         return 22;
       case ShoulderPressExerciseName.weightPlateFrontRaise:
         return 23;
+      case ShoulderPressExerciseName.dumbbellShoulderPress:
+        return 24;
+      case ShoulderPressExerciseName.militaryPress:
+        return 25;
+      case ShoulderPressExerciseName.strictPress:
+        return 27;
+      case ShoulderPressExerciseName.dumbbellFrontRaise:
+        return 28;
+      case ShoulderPressExerciseName.dumbbellCurlToOverheadPressWheelchair:
+        return 29;
+      case ShoulderPressExerciseName.arnoldPressWheelchair:
+        return 30;
+      case ShoulderPressExerciseName.overheadDumbbellPressWheelchair:
+        return 31;
     }
   }
 
@@ -18522,6 +18983,20 @@ extension ShoulderPressExerciseNameExt on ShoulderPressExerciseName {
         return ShoulderPressExerciseName.swissBallDumbbellShoulderPress;
       case 23:
         return ShoulderPressExerciseName.weightPlateFrontRaise;
+      case 24:
+        return ShoulderPressExerciseName.dumbbellShoulderPress;
+      case 25:
+        return ShoulderPressExerciseName.militaryPress;
+      case 27:
+        return ShoulderPressExerciseName.strictPress;
+      case 28:
+        return ShoulderPressExerciseName.dumbbellFrontRaise;
+      case 29:
+        return ShoulderPressExerciseName.dumbbellCurlToOverheadPressWheelchair;
+      case 30:
+        return ShoulderPressExerciseName.arnoldPressWheelchair;
+      case 31:
+        return ShoulderPressExerciseName.overheadDumbbellPressWheelchair;
       default:
         throw ArgumentError.value(value);
     }
@@ -18561,7 +19036,10 @@ enum ShoulderStabilityExerciseName {
   swissBallWRaise,
   weightedSwissBallWRaise,
   swissBallYRaise,
-  weightedSwissBallYRaise
+  weightedSwissBallYRaise,
+  cableInternalRotation,
+  lyingInternalRotation,
+  seatedDumbbellInternalRotation
 }
 
 extension ShoulderStabilityExerciseNameExt on ShoulderStabilityExerciseName {
@@ -18633,6 +19111,12 @@ extension ShoulderStabilityExerciseNameExt on ShoulderStabilityExerciseName {
         return 31;
       case ShoulderStabilityExerciseName.weightedSwissBallYRaise:
         return 32;
+      case ShoulderStabilityExerciseName.cableInternalRotation:
+        return 33;
+      case ShoulderStabilityExerciseName.lyingInternalRotation:
+        return 34;
+      case ShoulderStabilityExerciseName.seatedDumbbellInternalRotation:
+        return 35;
     }
   }
 
@@ -18706,6 +19190,12 @@ extension ShoulderStabilityExerciseNameExt on ShoulderStabilityExerciseName {
         return ShoulderStabilityExerciseName.swissBallYRaise;
       case 32:
         return ShoulderStabilityExerciseName.weightedSwissBallYRaise;
+      case 33:
+        return ShoulderStabilityExerciseName.cableInternalRotation;
+      case 34:
+        return ShoulderStabilityExerciseName.lyingInternalRotation;
+      case 35:
+        return ShoulderStabilityExerciseName.seatedDumbbellInternalRotation;
       default:
         throw ArgumentError.value(value);
     }
@@ -18729,7 +19219,15 @@ enum ShrugExerciseName {
   weightedSerratusChairShrug,
   serratusShrug,
   weightedSerratusShrug,
-  wideGripJumpShrug
+  wideGripJumpShrug,
+  wideGripBarbellShrug,
+  behindTheBackShrug,
+  dumbbellShrugWheelchair,
+  shrugWheelchair,
+  shrugArmDownWheelchair,
+  shrugArmMidWheelchair,
+  shrugArmUpWheelchair,
+  uprightRow
 }
 
 extension ShrugExerciseNameExt on ShrugExerciseName {
@@ -18769,6 +19267,22 @@ extension ShrugExerciseNameExt on ShrugExerciseName {
         return 15;
       case ShrugExerciseName.wideGripJumpShrug:
         return 16;
+      case ShrugExerciseName.wideGripBarbellShrug:
+        return 17;
+      case ShrugExerciseName.behindTheBackShrug:
+        return 18;
+      case ShrugExerciseName.dumbbellShrugWheelchair:
+        return 19;
+      case ShrugExerciseName.shrugWheelchair:
+        return 20;
+      case ShrugExerciseName.shrugArmDownWheelchair:
+        return 21;
+      case ShrugExerciseName.shrugArmMidWheelchair:
+        return 22;
+      case ShrugExerciseName.shrugArmUpWheelchair:
+        return 23;
+      case ShrugExerciseName.uprightRow:
+        return 24;
     }
   }
 
@@ -18808,6 +19322,22 @@ extension ShrugExerciseNameExt on ShrugExerciseName {
         return ShrugExerciseName.weightedSerratusShrug;
       case 16:
         return ShrugExerciseName.wideGripJumpShrug;
+      case 17:
+        return ShrugExerciseName.wideGripBarbellShrug;
+      case 18:
+        return ShrugExerciseName.behindTheBackShrug;
+      case 19:
+        return ShrugExerciseName.dumbbellShrugWheelchair;
+      case 20:
+        return ShrugExerciseName.shrugWheelchair;
+      case 21:
+        return ShrugExerciseName.shrugArmDownWheelchair;
+      case 22:
+        return ShrugExerciseName.shrugArmMidWheelchair;
+      case 23:
+        return ShrugExerciseName.shrugArmUpWheelchair;
+      case 24:
+        return ShrugExerciseName.uprightRow;
       default:
         throw ArgumentError.value(value);
     }
@@ -18852,7 +19382,10 @@ enum SitUpExerciseName {
   weightedSitUp,
   xAbs,
   weightedXAbs,
-  sitUp
+  sitUp,
+  ghdSitUps,
+  sitUpTurkishGetUp,
+  russianTwistOnSwissBall
 }
 
 extension SitUpExerciseNameExt on SitUpExerciseName {
@@ -18934,6 +19467,12 @@ extension SitUpExerciseNameExt on SitUpExerciseName {
         return 36;
       case SitUpExerciseName.sitUp:
         return 37;
+      case SitUpExerciseName.ghdSitUps:
+        return 38;
+      case SitUpExerciseName.sitUpTurkishGetUp:
+        return 39;
+      case SitUpExerciseName.russianTwistOnSwissBall:
+        return 40;
     }
   }
 
@@ -19015,6 +19554,12 @@ extension SitUpExerciseNameExt on SitUpExerciseName {
         return SitUpExerciseName.weightedXAbs;
       case 37:
         return SitUpExerciseName.sitUp;
+      case 38:
+        return SitUpExerciseName.ghdSitUps;
+      case 39:
+        return SitUpExerciseName.sitUpTurkishGetUp;
+      case 40:
+        return SitUpExerciseName.russianTwistOnSwissBall;
       default:
         throw ArgumentError.value(value);
     }
@@ -19113,7 +19658,16 @@ enum SquatExerciseName {
   squatAndSideKick,
   squatJumpsInNOut,
   pilatesPlieSquatsParallelTurnedOutFlatAndHeels,
-  releveStraightLegAndKneeBentWithOneLegVariation
+  releveStraightLegAndKneeBentWithOneLegVariation,
+  alternatingBoxDumbbellStepUps,
+  dumbbellOverheadSquatSingleArm,
+  dumbbellSquatSnatch,
+  medicineBallSquat,
+  wallBallSquatAndPress,
+  squatAmericanSwing,
+  airSquat,
+  dumbbellThrusters,
+  overheadBarbellSquat
 }
 
 extension SquatExerciseNameExt on SquatExerciseName {
@@ -19303,6 +19857,24 @@ extension SquatExerciseNameExt on SquatExerciseName {
         return 90;
       case SquatExerciseName.releveStraightLegAndKneeBentWithOneLegVariation:
         return 91;
+      case SquatExerciseName.alternatingBoxDumbbellStepUps:
+        return 92;
+      case SquatExerciseName.dumbbellOverheadSquatSingleArm:
+        return 93;
+      case SquatExerciseName.dumbbellSquatSnatch:
+        return 94;
+      case SquatExerciseName.medicineBallSquat:
+        return 95;
+      case SquatExerciseName.wallBallSquatAndPress:
+        return 97;
+      case SquatExerciseName.squatAmericanSwing:
+        return 98;
+      case SquatExerciseName.airSquat:
+        return 100;
+      case SquatExerciseName.dumbbellThrusters:
+        return 101;
+      case SquatExerciseName.overheadBarbellSquat:
+        return 102;
     }
   }
 
@@ -19493,6 +20065,24 @@ extension SquatExerciseNameExt on SquatExerciseName {
       case 91:
         return SquatExerciseName
             .releveStraightLegAndKneeBentWithOneLegVariation;
+      case 92:
+        return SquatExerciseName.alternatingBoxDumbbellStepUps;
+      case 93:
+        return SquatExerciseName.dumbbellOverheadSquatSingleArm;
+      case 94:
+        return SquatExerciseName.dumbbellSquatSnatch;
+      case 95:
+        return SquatExerciseName.medicineBallSquat;
+      case 97:
+        return SquatExerciseName.wallBallSquatAndPress;
+      case 98:
+        return SquatExerciseName.squatAmericanSwing;
+      case 100:
+        return SquatExerciseName.airSquat;
+      case 101:
+        return SquatExerciseName.dumbbellThrusters;
+      case 102:
+        return SquatExerciseName.overheadBarbellSquat;
       default:
         throw ArgumentError.value(value);
     }
@@ -19512,7 +20102,14 @@ enum TotalBodyExerciseName {
   squatPlankPushUp,
   weightedSquatPlankPushUp,
   standingTRotationBalance,
-  weightedStandingTRotationBalance
+  weightedStandingTRotationBalance,
+  barbellBurpee,
+  burpeeBoxJumpOverYesLiterallyJumpingOverTheBox,
+  burpeeBoxJumpStepUpOver,
+  lateralBarbellBurpee,
+  totalBodyBurpeeOverBar,
+  burpeeBoxJumpOver,
+  burpeeWheelchair
 }
 
 extension TotalBodyExerciseNameExt on TotalBodyExerciseName {
@@ -19544,6 +20141,20 @@ extension TotalBodyExerciseNameExt on TotalBodyExerciseName {
         return 11;
       case TotalBodyExerciseName.weightedStandingTRotationBalance:
         return 12;
+      case TotalBodyExerciseName.barbellBurpee:
+        return 13;
+      case TotalBodyExerciseName.burpeeBoxJumpOverYesLiterallyJumpingOverTheBox:
+        return 15;
+      case TotalBodyExerciseName.burpeeBoxJumpStepUpOver:
+        return 16;
+      case TotalBodyExerciseName.lateralBarbellBurpee:
+        return 17;
+      case TotalBodyExerciseName.totalBodyBurpeeOverBar:
+        return 18;
+      case TotalBodyExerciseName.burpeeBoxJumpOver:
+        return 19;
+      case TotalBodyExerciseName.burpeeWheelchair:
+        return 20;
     }
   }
 
@@ -19575,6 +20186,20 @@ extension TotalBodyExerciseNameExt on TotalBodyExerciseName {
         return TotalBodyExerciseName.standingTRotationBalance;
       case 12:
         return TotalBodyExerciseName.weightedStandingTRotationBalance;
+      case 13:
+        return TotalBodyExerciseName.barbellBurpee;
+      case 15:
+        return TotalBodyExerciseName.burpeeBoxJumpOverYesLiterallyJumpingOverTheBox;
+      case 16:
+        return TotalBodyExerciseName.burpeeBoxJumpStepUpOver;
+      case 17:
+        return TotalBodyExerciseName.lateralBarbellBurpee;
+      case 18:
+        return TotalBodyExerciseName.totalBodyBurpeeOverBar;
+      case 19:
+        return TotalBodyExerciseName.burpeeBoxJumpOver;
+      case 20:
+        return TotalBodyExerciseName.burpeeWheelchair;
       default:
         throw ArgumentError.value(value);
     }
@@ -19622,7 +20247,11 @@ enum TricepsExtensionExerciseName {
   weightedTabletopDip,
   tricepsExtensionOnFloor,
   tricepsPressdown,
-  weightedDip
+  weightedDip,
+  alternatingDumbbellLyingTricepsExtension,
+  tricepsPress,
+  dumbbellKickbackWheelchair,
+  overheadDumbbellTricepsExtensionWheelchair
 }
 
 extension TricepsExtensionExerciseNameExt on TricepsExtensionExerciseName {
@@ -19714,6 +20343,14 @@ extension TricepsExtensionExerciseNameExt on TricepsExtensionExerciseName {
         return 39;
       case TricepsExtensionExerciseName.weightedDip:
         return 40;
+      case TricepsExtensionExerciseName.alternatingDumbbellLyingTricepsExtension:
+        return 41;
+      case TricepsExtensionExerciseName.tricepsPress:
+        return 42;
+      case TricepsExtensionExerciseName.dumbbellKickbackWheelchair:
+        return 43;
+      case TricepsExtensionExerciseName.overheadDumbbellTricepsExtensionWheelchair:
+        return 44;
     }
   }
 
@@ -19809,6 +20446,14 @@ extension TricepsExtensionExerciseNameExt on TricepsExtensionExerciseName {
         return TricepsExtensionExerciseName.tricepsPressdown;
       case 40:
         return TricepsExtensionExerciseName.weightedDip;
+      case 41:
+        return TricepsExtensionExerciseName.alternatingDumbbellLyingTricepsExtension;
+      case 42:
+        return TricepsExtensionExerciseName.tricepsPress;
+      case 43:
+        return TricepsExtensionExerciseName.dumbbellKickbackWheelchair;
+      case 44:
+        return TricepsExtensionExerciseName.overheadDumbbellTricepsExtensionWheelchair;
       default:
         throw ArgumentError.value(value);
     }
@@ -19846,7 +20491,67 @@ enum WarmUpExerciseName {
   walkingKneeHugs,
   walkingLegCradles,
   walkout,
-  walkoutFromPushUpPosition
+  walkoutFromPushUpPosition,
+  bicepsStretch,
+  glutesStretch,
+  standingHamstringStretch,
+  stretch90_90,
+  stretchAbs,
+  stretchButterfly,
+  stretchCalf,
+  stretchCatCow,
+  stretchChildsPose,
+  stretchCobra,
+  stretchForearms,
+  stretchForwardGlutes,
+  stretchFrontSplit,
+  stretchHamstring,
+  stretchHipFlexorAndQuad,
+  stretchLat,
+  stretchLevatorScapulae,
+  stretchLungeWithSpinalTwist,
+  stretchLungingHipFlexor,
+  stretchLyingAbduction,
+  stretchLyingItBand,
+  stretchLyingKneeToChest,
+  stretchLyingPiriformis,
+  stretchLyingSpinalTwist,
+  stretchNeck,
+  stretchObliques,
+  stretchOverUnderShoulder,
+  stretchPectoral,
+  stretchPigeonPose,
+  stretchPiriformis,
+  stretchQuad,
+  stretchScorpion,
+  stretchShoulder,
+  stretchSide,
+  stretchSideLunge,
+  stretchSideSplit,
+  stretchStandingItBand,
+  stretchStraddle,
+  stretchTriceps,
+  stretchWallChestAndShoulder,
+  neckRotationsWheelchair,
+  halfKneelingArmRotation,
+  threeWayAnkleMobilization,
+  ninetyNinetyHipSwitch,
+  activeFrog,
+  shoulderSweeps,
+  ankleLunges,
+  backRollFoamRoller,
+  bearCrawl,
+  latissimusDorsiFoamRoll,
+  reverseTHipOpener,
+  shoulderRolls,
+  chestOpeners,
+  tricepsStretch,
+  upperBackStretch,
+  hipCircles,
+  ankleStretch,
+  marchingInPlace,
+  tricepsStretchWheelchair,
+  upperBackStretchWheelchair
 }
 
 extension WarmUpExerciseNameExt on WarmUpExerciseName {
@@ -19914,6 +20619,126 @@ extension WarmUpExerciseNameExt on WarmUpExerciseName {
         return 29;
       case WarmUpExerciseName.walkoutFromPushUpPosition:
         return 30;
+      case WarmUpExerciseName.bicepsStretch:
+        return 31;
+      case WarmUpExerciseName.glutesStretch:
+        return 32;
+      case WarmUpExerciseName.standingHamstringStretch:
+        return 33;
+      case WarmUpExerciseName.stretch90_90:
+        return 34;
+      case WarmUpExerciseName.stretchAbs:
+        return 35;
+      case WarmUpExerciseName.stretchButterfly:
+        return 36;
+      case WarmUpExerciseName.stretchCalf:
+        return 37;
+      case WarmUpExerciseName.stretchCatCow:
+        return 38;
+      case WarmUpExerciseName.stretchChildsPose:
+        return 39;
+      case WarmUpExerciseName.stretchCobra:
+        return 40;
+      case WarmUpExerciseName.stretchForearms:
+        return 41;
+      case WarmUpExerciseName.stretchForwardGlutes:
+        return 42;
+      case WarmUpExerciseName.stretchFrontSplit:
+        return 43;
+      case WarmUpExerciseName.stretchHamstring:
+        return 44;
+      case WarmUpExerciseName.stretchHipFlexorAndQuad:
+        return 45;
+      case WarmUpExerciseName.stretchLat:
+        return 46;
+      case WarmUpExerciseName.stretchLevatorScapulae:
+        return 47;
+      case WarmUpExerciseName.stretchLungeWithSpinalTwist:
+        return 48;
+      case WarmUpExerciseName.stretchLungingHipFlexor:
+        return 49;
+      case WarmUpExerciseName.stretchLyingAbduction:
+        return 50;
+      case WarmUpExerciseName.stretchLyingItBand:
+        return 51;
+      case WarmUpExerciseName.stretchLyingKneeToChest:
+        return 52;
+      case WarmUpExerciseName.stretchLyingPiriformis:
+        return 53;
+      case WarmUpExerciseName.stretchLyingSpinalTwist:
+        return 54;
+      case WarmUpExerciseName.stretchNeck:
+        return 55;
+      case WarmUpExerciseName.stretchObliques:
+        return 56;
+      case WarmUpExerciseName.stretchOverUnderShoulder:
+        return 57;
+      case WarmUpExerciseName.stretchPectoral:
+        return 58;
+      case WarmUpExerciseName.stretchPigeonPose:
+        return 59;
+      case WarmUpExerciseName.stretchPiriformis:
+        return 60;
+      case WarmUpExerciseName.stretchQuad:
+        return 61;
+      case WarmUpExerciseName.stretchScorpion:
+        return 62;
+      case WarmUpExerciseName.stretchShoulder:
+        return 63;
+      case WarmUpExerciseName.stretchSide:
+        return 64;
+      case WarmUpExerciseName.stretchSideLunge:
+        return 65;
+      case WarmUpExerciseName.stretchSideSplit:
+        return 66;
+      case WarmUpExerciseName.stretchStandingItBand:
+        return 67;
+      case WarmUpExerciseName.stretchStraddle:
+        return 68;
+      case WarmUpExerciseName.stretchTriceps:
+        return 69;
+      case WarmUpExerciseName.stretchWallChestAndShoulder:
+        return 70;
+      case WarmUpExerciseName.neckRotationsWheelchair:
+        return 71;
+      case WarmUpExerciseName.halfKneelingArmRotation:
+        return 72;
+      case WarmUpExerciseName.threeWayAnkleMobilization:
+        return 73;
+      case WarmUpExerciseName.ninetyNinetyHipSwitch:
+        return 74;
+      case WarmUpExerciseName.activeFrog:
+        return 75;
+      case WarmUpExerciseName.shoulderSweeps:
+        return 76;
+      case WarmUpExerciseName.ankleLunges:
+        return 77;
+      case WarmUpExerciseName.backRollFoamRoller:
+        return 78;
+      case WarmUpExerciseName.bearCrawl:
+        return 79;
+      case WarmUpExerciseName.latissimusDorsiFoamRoll:
+        return 80;
+      case WarmUpExerciseName.reverseTHipOpener:
+        return 81;
+      case WarmUpExerciseName.shoulderRolls:
+        return 82;
+      case WarmUpExerciseName.chestOpeners:
+        return 83;
+      case WarmUpExerciseName.tricepsStretch:
+        return 84;
+      case WarmUpExerciseName.upperBackStretch:
+        return 85;
+      case WarmUpExerciseName.hipCircles:
+        return 86;
+      case WarmUpExerciseName.ankleStretch:
+        return 87;
+      case WarmUpExerciseName.marchingInPlace:
+        return 88;
+      case WarmUpExerciseName.tricepsStretchWheelchair:
+        return 89;
+      case WarmUpExerciseName.upperBackStretchWheelchair:
+        return 90;
     }
   }
 
@@ -19981,6 +20806,126 @@ extension WarmUpExerciseNameExt on WarmUpExerciseName {
         return WarmUpExerciseName.walkout;
       case 30:
         return WarmUpExerciseName.walkoutFromPushUpPosition;
+      case 31:
+        return WarmUpExerciseName.bicepsStretch;
+      case 32:
+        return WarmUpExerciseName.glutesStretch;
+      case 33:
+        return WarmUpExerciseName.standingHamstringStretch;
+      case 34:
+        return WarmUpExerciseName.stretch90_90;
+      case 35:
+        return WarmUpExerciseName.stretchAbs;
+      case 36:
+        return WarmUpExerciseName.stretchButterfly;
+      case 37:
+        return WarmUpExerciseName.stretchCalf;
+      case 38:
+        return WarmUpExerciseName.stretchCatCow;
+      case 39:
+        return WarmUpExerciseName.stretchChildsPose;
+      case 40:
+        return WarmUpExerciseName.stretchCobra;
+      case 41:
+        return WarmUpExerciseName.stretchForearms;
+      case 42:
+        return WarmUpExerciseName.stretchForwardGlutes;
+      case 43:
+        return WarmUpExerciseName.stretchFrontSplit;
+      case 44:
+        return WarmUpExerciseName.stretchHamstring;
+      case 45:
+        return WarmUpExerciseName.stretchHipFlexorAndQuad;
+      case 46:
+        return WarmUpExerciseName.stretchLat;
+      case 47:
+        return WarmUpExerciseName.stretchLevatorScapulae;
+      case 48:
+        return WarmUpExerciseName.stretchLungeWithSpinalTwist;
+      case 49:
+        return WarmUpExerciseName.stretchLungingHipFlexor;
+      case 50:
+        return WarmUpExerciseName.stretchLyingAbduction;
+      case 51:
+        return WarmUpExerciseName.stretchLyingItBand;
+      case 52:
+        return WarmUpExerciseName.stretchLyingKneeToChest;
+      case 53:
+        return WarmUpExerciseName.stretchLyingPiriformis;
+      case 54:
+        return WarmUpExerciseName.stretchLyingSpinalTwist;
+      case 55:
+        return WarmUpExerciseName.stretchNeck;
+      case 56:
+        return WarmUpExerciseName.stretchObliques;
+      case 57:
+        return WarmUpExerciseName.stretchOverUnderShoulder;
+      case 58:
+        return WarmUpExerciseName.stretchPectoral;
+      case 59:
+        return WarmUpExerciseName.stretchPigeonPose;
+      case 60:
+        return WarmUpExerciseName.stretchPiriformis;
+      case 61:
+        return WarmUpExerciseName.stretchQuad;
+      case 62:
+        return WarmUpExerciseName.stretchScorpion;
+      case 63:
+        return WarmUpExerciseName.stretchShoulder;
+      case 64:
+        return WarmUpExerciseName.stretchSide;
+      case 65:
+        return WarmUpExerciseName.stretchSideLunge;
+      case 66:
+        return WarmUpExerciseName.stretchSideSplit;
+      case 67:
+        return WarmUpExerciseName.stretchStandingItBand;
+      case 68:
+        return WarmUpExerciseName.stretchStraddle;
+      case 69:
+        return WarmUpExerciseName.stretchTriceps;
+      case 70:
+        return WarmUpExerciseName.stretchWallChestAndShoulder;
+      case 71:
+        return WarmUpExerciseName.neckRotationsWheelchair;
+      case 72:
+        return WarmUpExerciseName.halfKneelingArmRotation;
+      case 73:
+        return WarmUpExerciseName.threeWayAnkleMobilization;
+      case 74:
+        return WarmUpExerciseName.ninetyNinetyHipSwitch;
+      case 75:
+        return WarmUpExerciseName.activeFrog;
+      case 76:
+        return WarmUpExerciseName.shoulderSweeps;
+      case 77:
+        return WarmUpExerciseName.ankleLunges;
+      case 78:
+        return WarmUpExerciseName.backRollFoamRoller;
+      case 79:
+        return WarmUpExerciseName.bearCrawl;
+      case 80:
+        return WarmUpExerciseName.latissimusDorsiFoamRoll;
+      case 81:
+        return WarmUpExerciseName.reverseTHipOpener;
+      case 82:
+        return WarmUpExerciseName.shoulderRolls;
+      case 83:
+        return WarmUpExerciseName.chestOpeners;
+      case 84:
+        return WarmUpExerciseName.tricepsStretch;
+      case 85:
+        return WarmUpExerciseName.upperBackStretch;
+      case 86:
+        return WarmUpExerciseName.hipCircles;
+      case 87:
+        return WarmUpExerciseName.ankleStretch;
+      case 88:
+        return WarmUpExerciseName.marchingInPlace;
+      case 89:
+        return WarmUpExerciseName.tricepsStretchWheelchair;
+      case 90:
+        return WarmUpExerciseName.upperBackStretchWheelchair;
       default:
         throw ArgumentError.value(value);
     }
