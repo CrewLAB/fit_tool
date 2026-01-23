@@ -2344,6 +2344,7 @@ enum Sport {
   boxing,
   floorClimbing,
   diving,
+  pickleball,
   all
 }
 
@@ -2450,6 +2451,8 @@ extension SportExt on Sport {
         return 48;
       case Sport.diving:
         return 53;
+      case Sport.pickleball:
+        return 62;
       case Sport.all:
         return 254;
     }
@@ -2557,10 +2560,12 @@ extension SportExt on Sport {
         return Sport.floorClimbing;
       case 53:
         return Sport.diving;
+      case 62:
+        return Sport.pickleball;
       case 254:
         return Sport.all;
       default:
-        throw ArgumentError.value(value);
+        return Sport.generic;
     }
   }
 }
