@@ -20,6 +20,7 @@ export 'src/record.dart';
 export 'src/sub_field.dart';
 export 'src/utils/conversions.dart';
 export 'src/utils/crc.dart';
+export 'src/utils/logger.dart' show fitToolWarning;
 export 'src/utils/type_sizes.dart';
 
 export 'src/profile/profile_type.dart';
