@@ -324,7 +324,7 @@ class ThreeDSensorCalibrationMessage extends DataMessage {
   List<double>? get orientationMatrix {
     final field = getField(ThreeDSensorCalibrationOrientationMatrixField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }

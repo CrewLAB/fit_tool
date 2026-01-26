@@ -172,7 +172,7 @@ class MonitoringInfoMessage extends DataMessage {
   List<double>? get cyclesToDistance {
     final field = getField(MonitoringInfoCyclesToDistanceField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -198,7 +198,7 @@ class MonitoringInfoMessage extends DataMessage {
   List<double>? get cyclesToCalories {
     final field = getField(MonitoringInfoCyclesToCaloriesField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }

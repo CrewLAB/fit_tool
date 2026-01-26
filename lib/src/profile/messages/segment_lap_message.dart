@@ -2061,7 +2061,7 @@ class SegmentLapMessage extends DataMessage {
   List<double>? get timeInHrZone {
     final field = getField(SegmentLapTimeInHrZoneField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -2087,7 +2087,7 @@ class SegmentLapMessage extends DataMessage {
   List<double>? get timeInSpeedZone {
     final field = getField(SegmentLapTimeInSpeedZoneField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -2113,7 +2113,7 @@ class SegmentLapMessage extends DataMessage {
   List<double>? get timeInCadenceZone {
     final field = getField(SegmentLapTimeInCadenceZoneField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -2139,7 +2139,7 @@ class SegmentLapMessage extends DataMessage {
   List<double>? get timeInPowerZone {
     final field = getField(SegmentLapTimeInPowerZoneField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -2767,7 +2767,7 @@ class SegmentLapMessage extends DataMessage {
   List<double>? get avgLeftPowerPhase {
     final field = getField(SegmentLapAvgLeftPowerPhaseField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -2793,7 +2793,7 @@ class SegmentLapMessage extends DataMessage {
   List<double>? get avgLeftPowerPhasePeak {
     final field = getField(SegmentLapAvgLeftPowerPhasePeakField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -2819,7 +2819,7 @@ class SegmentLapMessage extends DataMessage {
   List<double>? get avgRightPowerPhase {
     final field = getField(SegmentLapAvgRightPowerPhaseField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -2845,7 +2845,7 @@ class SegmentLapMessage extends DataMessage {
   List<double>? get avgRightPowerPhasePeak {
     final field = getField(SegmentLapAvgRightPowerPhasePeakField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }

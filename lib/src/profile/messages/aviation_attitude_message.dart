@@ -208,7 +208,7 @@ class AviationAttitudeMessage extends DataMessage {
   List<double>? get pitch {
     final field = getField(AviationAttitudePitchField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -234,7 +234,7 @@ class AviationAttitudeMessage extends DataMessage {
   List<double>? get roll {
     final field = getField(AviationAttitudeRollField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -260,7 +260,7 @@ class AviationAttitudeMessage extends DataMessage {
   List<double>? get accelLateral {
     final field = getField(AviationAttitudeAccelLateralField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -286,7 +286,7 @@ class AviationAttitudeMessage extends DataMessage {
   List<double>? get accelNormal {
     final field = getField(AviationAttitudeAccelNormalField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -312,7 +312,7 @@ class AviationAttitudeMessage extends DataMessage {
   List<double>? get turnRate {
     final field = getField(AviationAttitudeTurnRateField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -391,7 +391,7 @@ class AviationAttitudeMessage extends DataMessage {
   List<double>? get track {
     final field = getField(AviationAttitudeTrackField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }

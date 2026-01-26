@@ -221,7 +221,7 @@ class SegmentPointMessage extends DataMessage {
   List<double>? get leaderTime {
     final field = getField(SegmentPointLeaderTimeField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }

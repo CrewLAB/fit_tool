@@ -322,7 +322,7 @@ class DeviceSettingsMessage extends DataMessage {
   List<double>? get timeZoneOffset {
     final field = getField(DeviceSettingsTimeZoneOffsetField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }

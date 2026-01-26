@@ -2339,7 +2339,7 @@ class LapMessage extends DataMessage {
   List<double>? get timeInHrZone {
     final field = getField(LapTimeInHrZoneField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -2365,7 +2365,7 @@ class LapMessage extends DataMessage {
   List<double>? get timeInSpeedZone {
     final field = getField(LapTimeInSpeedZoneField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -2391,7 +2391,7 @@ class LapMessage extends DataMessage {
   List<double>? get timeInCadenceZone {
     final field = getField(LapTimeInCadenceZoneField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -2417,7 +2417,7 @@ class LapMessage extends DataMessage {
   List<double>? get timeInPowerZone {
     final field = getField(LapTimeInPowerZoneField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -2819,7 +2819,7 @@ class LapMessage extends DataMessage {
   List<double>? get avgTotalHemoglobinConc {
     final field = getField(LapAvgTotalHemoglobinConcField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -2845,7 +2845,7 @@ class LapMessage extends DataMessage {
   List<double>? get minTotalHemoglobinConc {
     final field = getField(LapMinTotalHemoglobinConcField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -2871,7 +2871,7 @@ class LapMessage extends DataMessage {
   List<double>? get maxTotalHemoglobinConc {
     final field = getField(LapMaxTotalHemoglobinConcField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -2897,7 +2897,7 @@ class LapMessage extends DataMessage {
   List<double>? get avgSaturatedHemoglobinPercent {
     final field = getField(LapAvgSaturatedHemoglobinPercentField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -2923,7 +2923,7 @@ class LapMessage extends DataMessage {
   List<double>? get minSaturatedHemoglobinPercent {
     final field = getField(LapMinSaturatedHemoglobinPercentField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -2949,7 +2949,7 @@ class LapMessage extends DataMessage {
   List<double>? get maxSaturatedHemoglobinPercent {
     final field = getField(LapMaxSaturatedHemoglobinPercentField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -3218,7 +3218,7 @@ class LapMessage extends DataMessage {
   List<double>? get avgLeftPowerPhase {
     final field = getField(LapAvgLeftPowerPhaseField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -3244,7 +3244,7 @@ class LapMessage extends DataMessage {
   List<double>? get avgLeftPowerPhasePeak {
     final field = getField(LapAvgLeftPowerPhasePeakField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -3270,7 +3270,7 @@ class LapMessage extends DataMessage {
   List<double>? get avgRightPowerPhase {
     final field = getField(LapAvgRightPowerPhaseField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -3296,7 +3296,7 @@ class LapMessage extends DataMessage {
   List<double>? get avgRightPowerPhasePeak {
     final field = getField(LapAvgRightPowerPhasePeakField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }

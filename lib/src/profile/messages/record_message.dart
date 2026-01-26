@@ -914,7 +914,7 @@ class RecordMessage extends DataMessage {
   List<double>? get speed1s {
     final field = getField(RecordSpeed1sField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -1812,7 +1812,7 @@ class RecordMessage extends DataMessage {
   List<double>? get leftPowerPhase {
     final field = getField(RecordLeftPowerPhaseField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -1838,7 +1838,7 @@ class RecordMessage extends DataMessage {
   List<double>? get leftPowerPhasePeak {
     final field = getField(RecordLeftPowerPhasePeakField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -1864,7 +1864,7 @@ class RecordMessage extends DataMessage {
   List<double>? get rightPowerPhase {
     final field = getField(RecordRightPowerPhaseField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -1890,7 +1890,7 @@ class RecordMessage extends DataMessage {
   List<double>? get rightPowerPhasePeak {
     final field = getField(RecordRightPowerPhasePeakField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }

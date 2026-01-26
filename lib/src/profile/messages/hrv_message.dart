@@ -56,7 +56,7 @@ class HrvMessage extends DataMessage {
   List<double>? get time {
     final field = getField(HrvTimeField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }

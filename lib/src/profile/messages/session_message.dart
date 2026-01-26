@@ -2717,7 +2717,7 @@ class SessionMessage extends DataMessage {
   List<double>? get timeInHrZone {
     final field = getField(SessionTimeInHrZoneField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -2743,7 +2743,7 @@ class SessionMessage extends DataMessage {
   List<double>? get timeInSpeedZone {
     final field = getField(SessionTimeInSpeedZoneField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -2769,7 +2769,7 @@ class SessionMessage extends DataMessage {
   List<double>? get timeInCadenceZone {
     final field = getField(SessionTimeInCadenceZoneField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -2795,7 +2795,7 @@ class SessionMessage extends DataMessage {
   List<double>? get timeInPowerZone {
     final field = getField(SessionTimeInPowerZoneField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -3251,7 +3251,7 @@ class SessionMessage extends DataMessage {
   List<double>? get avgTotalHemoglobinConc {
     final field = getField(SessionAvgTotalHemoglobinConcField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -3277,7 +3277,7 @@ class SessionMessage extends DataMessage {
   List<double>? get minTotalHemoglobinConc {
     final field = getField(SessionMinTotalHemoglobinConcField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -3303,7 +3303,7 @@ class SessionMessage extends DataMessage {
   List<double>? get maxTotalHemoglobinConc {
     final field = getField(SessionMaxTotalHemoglobinConcField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -3329,7 +3329,7 @@ class SessionMessage extends DataMessage {
   List<double>? get avgSaturatedHemoglobinPercent {
     final field = getField(SessionAvgSaturatedHemoglobinPercentField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -3355,7 +3355,7 @@ class SessionMessage extends DataMessage {
   List<double>? get minSaturatedHemoglobinPercent {
     final field = getField(SessionMinSaturatedHemoglobinPercentField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -3381,7 +3381,7 @@ class SessionMessage extends DataMessage {
   List<double>? get maxSaturatedHemoglobinPercent {
     final field = getField(SessionMaxSaturatedHemoglobinPercentField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -3677,7 +3677,7 @@ class SessionMessage extends DataMessage {
   List<double>? get avgLeftPowerPhase {
     final field = getField(SessionAvgLeftPowerPhaseField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -3703,7 +3703,7 @@ class SessionMessage extends DataMessage {
   List<double>? get avgLeftPowerPhasePeak {
     final field = getField(SessionAvgLeftPowerPhasePeakField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -3729,7 +3729,7 @@ class SessionMessage extends DataMessage {
   List<double>? get avgRightPowerPhase {
     final field = getField(SessionAvgRightPowerPhaseField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
@@ -3755,7 +3755,7 @@ class SessionMessage extends DataMessage {
   List<double>? get avgRightPowerPhasePeak {
     final field = getField(SessionAvgRightPowerPhasePeakField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }

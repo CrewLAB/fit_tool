@@ -321,7 +321,7 @@ class GpsMetadataMessage extends DataMessage {
   List<double>? get velocity {
     final field = getField(GpsMetadataVelocityField.ID);
     if (field != null && field.isValid()) {
-      return field.getValues();
+      return field.getValues().cast<double>();
     } else {
       return null;
     }
