@@ -1,6 +1,7 @@
 import 'package:logger/logger.dart';
 
 var logger = Logger(
+  level: Level.off,
   printer: PrettyPrinter(methodCount: 0),
   // printer: SimplePrinter(),
 );
